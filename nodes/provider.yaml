@@ -1,0 +1,156 @@
+# FreeNodeSpider - Proxy-provider based config (for Clash Meta / Mihomo)
+# Generated: 2026-08-01 08:47:19
+# Docs: https://github.com/FreeNodeSpider
+# ------------------------------------------------------------
+allow-lan: true
+dns:
+  default-nameserver:
+  - 223.5.5.5
+  - 114.114.114.114
+  enable: true
+  listen: 0.0.0.0:53
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+ipv6: true
+log-level: info
+mixed-port: 7890
+mode: rule
+proxy-groups:
+- include: (澳大利亚|AU|Australia|Sydney|SYD)
+  interval: 300
+  name: 🇦🇺 AU 澳大利亚
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: &id001
+  - clashnode
+  - datiya
+  - oneclash
+- include: (加拿大|CA|Canada|Toronto|YVR|YYZ)
+  interval: 300
+  name: 🇨🇦 CA 加拿大
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (德国|DE|Germany|Frankfurt|FRA)
+  interval: 300
+  name: 🇩🇪 DE 德国
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (法国|FR|France|Paris)
+  interval: 300
+  name: 🇫🇷 FR 法国
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (英国|GB|UK|United Kingdom|London|LHR)
+  interval: 300
+  name: 🇬🇧 GB 英国
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (香港|HK|Hong Kong|HongKong|HKG)
+  interval: 300
+  name: 🇭🇰 HK 香港
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (印度|IN|India|Mumbai|BOM)
+  interval: 300
+  name: 🇮🇳 IN 印度
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (日本|JP|Japan|TYO|Tokyo|Osaka|NRT)
+  interval: 300
+  name: 🇯🇵 JP 日本
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (韩国|KR|Korea|Seoul|ICN)
+  interval: 300
+  name: 🇰🇷 KR 韩国
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (荷兰|NL|Netherlands|Amsterdam)
+  interval: 300
+  name: 🇳🇱 NL 荷兰
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (俄罗斯|RU|Russia|Moscow)
+  interval: 300
+  name: 🇷🇺 RU 俄罗斯
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (新加坡|SG|Singapore)
+  interval: 300
+  name: 🇸🇬 SG 新加坡
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (台湾|TW|Taiwan|Taipei|TPE)
+  interval: 300
+  name: 🇹🇼 TW 台湾
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (美国|US|United States|USA|America|LAX|SJC)
+  interval: 300
+  name: 🇺🇸 US 美国
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- interval: 300
+  name: 🚀 自动选择
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use:
+  - clashnode
+  - datiya
+  - oneclash
+- name: 🌍 手动选择
+  proxies:
+  - 🚀 自动选择
+  - 🇦🇺 AU 澳大利亚
+  - 🇨🇦 CA 加拿大
+  - 🇩🇪 DE 德国
+  - 🇫🇷 FR 法国
+  - 🇬🇧 GB 英国
+  - 🇭🇰 HK 香港
+  - 🇮🇳 IN 印度
+  - 🇯🇵 JP 日本
+  - 🇰🇷 KR 韩国
+  - 🇳🇱 NL 荷兰
+  - 🇷🇺 RU 俄罗斯
+  - 🇸🇬 SG 新加坡
+  - 🇹🇼 TW 台湾
+  - 🇺🇸 US 美国
+  type: select
+proxy-providers:
+  clashnode:
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+    path: ./nodes/clashnode.yaml
+    type: file
+  datiya:
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+    path: ./nodes/datiya.yaml
+    type: file
+  oneclash:
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+    path: ./nodes/oneclash.yaml
+    type: file
+rules:
+- MATCH,🌍 手动选择

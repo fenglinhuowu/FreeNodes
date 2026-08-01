@@ -1,0 +1,47 @@
+name: AI Crawl Daily Update
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # daily at 12:00 Beijing time (UTC 04:00)
+  workflow_dispatch:       # manual trigger
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: feat/ai-crawler-v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: |
+          pip install -e .
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Run crawler
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+        run: python main.py
+
+      - name: Commit output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Force-add files that may be gitignored (nodes/) or newly generated
+          git add --force nodes/*.txt nodes/*.yaml config.yaml README.md
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "auto: daily crawl update"
+            git push
+          fi
