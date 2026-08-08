@@ -1,16 +1,16 @@
 check:
   alive_file: alive.txt
-  batch_size: 120
-  concurrency: 20
+  batch_size: 150
+  concurrency: 30
   mihomo_path: D:\Program Files\Sparkle\resources\sidecar\mihomo.exe
   mode: proxy
   save_alive: true
   test_url: http://www.gstatic.com/generate_204
-  timeout: 5.0
+  timeout: 8.0
 crawl:
   concurrency: 2
-  max_articles: 3
-  timeout: 30
+  max_articles: 5
+  timeout: 45
 llm:
   providers:
   - api_key_env: OPENROUTER_API_KEY
@@ -103,3 +103,65 @@ sites:
   node_count: 3
   start_url: https://free.datiya.com/
   up_date: '2026-08-01'
+subscriptions:
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/all/configs_base64.txt
+  name: radikal
+  url: https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/all/configs_base64.txt
+- enabled: true
+  kind: yaml
+  mirrors:
+  - https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/all/clash.yaml
+  name: radikal_clash
+  url: https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/all/clash.yaml
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt
+  name: au1rxx
+  url: https://cdn.jsdelivr.net/gh/Au1rxx/free-vpn-subscriptions@main/output/v2ray-base64.txt
+- enabled: true
+  kind: yaml
+  mirrors:
+  - https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml
+  name: au1rxx_clash
+  url: https://cdn.jsdelivr.net/gh/Au1rxx/free-vpn-subscriptions@main/output/clash.yaml
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray
+  name: mfuu
+  url: https://cdn.jsdelivr.net/gh/mfuu/v2ray@master/v2ray
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v202608062
+  - https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v202608062
+  name: aiboboxx
+  url: https://cdn.jsdelivr.net/gh/free-nodes/v2rayfree@main/v202608062
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+  name: pawdroid
+  url: https://cdn.jsdelivr.net/gh/Pawdroid/Free-servers@main/sub
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/freefq/free/master/v2
+  name: freefq
+  url: https://cdn.jsdelivr.net/gh/freefq/free@master/v2
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+  name: ermaozi
+  url: https://cdn.jsdelivr.net/gh/ermaozi/get_subscribe@main/subscribe/v2ray.txt
+- enabled: true
+  kind: yaml
+  mirrors:
+  - https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
+  name: anaer
+  url: https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml

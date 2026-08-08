@@ -41,8 +41,8 @@ class CrawlConfig:
 @dataclass
 class CheckConfig:
     """Node validation settings (mihomo url-test or TCP)."""
-    timeout: float = 5.0
-    concurrency: int = 20
+    timeout: float = 8.0
+    concurrency: int = 30
     save_alive: bool = True
     alive_file: str = "alive.txt"
     mode: str = "proxy"  # proxy | tcp
@@ -52,12 +52,22 @@ class CheckConfig:
 
 
 @dataclass
+class SubscriptionConfig:
+    name: str
+    url: str
+    kind: str = "auto"  # auto | txt | yaml
+    mirrors: list[str] = field(default_factory=list)
+    enabled: bool = True
+
+
+@dataclass
 class Config:
     sites: list[SiteConfig]
     crawl: CrawlConfig
     output: dict
     llm: LLMConfig
     check: CheckConfig = field(default_factory=CheckConfig)
+    subscriptions: list[SubscriptionConfig] = field(default_factory=list)
 
 
 def load_config(path: str = "config.yaml") -> Config:
@@ -76,7 +86,19 @@ def load_config(path: str = "config.yaml") -> Config:
     check_raw = raw.get("check") or {}
     check = CheckConfig(**{k: v for k, v in check_raw.items() if k in CheckConfig.__dataclass_fields__})
 
-    return Config(sites=sites, crawl=crawl, output=output, llm=llm, check=check)
+    subs = []
+    for s in raw.get("subscriptions") or []:
+        fields = {k: v for k, v in s.items() if k in SubscriptionConfig.__dataclass_fields__}
+        subs.append(SubscriptionConfig(**fields))
+
+    return Config(
+        sites=sites,
+        crawl=crawl,
+        output=output,
+        llm=llm,
+        check=check,
+        subscriptions=subs,
+    )
 
 
 def save_config(config: Config, path: str = "config.yaml"):
@@ -133,6 +155,16 @@ def save_config(config: Config, path: str = "config.yaml"):
         },
         "output": config.output,
         "sites": raw_sites,
+        "subscriptions": [
+            {
+                "name": s.name,
+                "url": s.url,
+                "kind": s.kind,
+                "enabled": s.enabled,
+                **({"mirrors": s.mirrors} if s.mirrors else {}),
+            }
+            for s in config.subscriptions
+        ],
         "llm": raw_llm,
     }
 

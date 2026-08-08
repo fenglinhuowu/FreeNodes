@@ -457,7 +457,14 @@ async def run_check(
         )
     print_alive(summary)
     if cfg.save_alive:
-        save_alive(summary, nodes_dir, cfg.alive_file)
+        alive_name = cfg.alive_file
+        # Avoid overwriting the global alive list when checking a single site/source
+        if site and alive_name == "alive.txt":
+            alive_name = f"alive_{site}.txt"
+        elif source_file and alive_name == "alive.txt":
+            stem = Path(source_file).stem
+            alive_name = f"alive_{stem}.txt"
+        save_alive(summary, nodes_dir, alive_name)
     return summary
 
 

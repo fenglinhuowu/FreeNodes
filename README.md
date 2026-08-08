@@ -20,9 +20,9 @@ v2ray、Clash 免费节点爬虫（AI 版），每日 12:00 自动运行。
 | [jichangx](https://jichangx.com/free-subscription/) | — | — | — |
 | [clashstair](https://clashstair.com/category/freenode/) | — (6 nodes) | — | 2026-07-23 |
 | [datiya](https://free.datiya.com/) | [datiya.yaml](https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/datiya.yaml) (3 nodes) | [镜像](https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/datiya.yaml) | 2026-08-01 |
-| [merged](https://github.com/Barabama/FreeNodes/tree/feat/ai-crawler-v2) | [merged.txt](https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.txt)<br>[merged.yaml](https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.yaml)<br>[provider.yaml](https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/provider.yaml) | [镜像](https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.txt)<br>[镜像](https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.yaml)<br>[镜像](https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/provider.yaml) | 2026-08-01 |
+| [merged](https://github.com/Barabama/FreeNodes/tree/feat/ai-crawler-v2) | [merged.txt](https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.txt)<br>[merged.yaml](https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.yaml)<br>[provider.yaml](https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/provider.yaml) | [镜像](https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.txt)<br>[镜像](https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/merged.yaml)<br>[镜像](https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/feat/ai-crawler-v2/nodes/provider.yaml) | 2026-08-04 |
 
 ---
 
-*上次更新: 2026-08-01 | 运行方式: GitHub Actions (feat/ai-crawler-v2)*
+*上次更新: 2026-08-04 | 运行方式: GitHub Actions (feat/ai-crawler-v2)*
 

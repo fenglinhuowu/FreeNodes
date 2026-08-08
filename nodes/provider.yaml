@@ -1,5 +1,5 @@
 # FreeNodeSpider - Proxy-provider based config (for Clash Meta / Mihomo)
-# Generated: 2026-08-01 08:47:19
+# Generated: 2026-08-04 20:38:29
 # Docs: https://github.com/FreeNodeSpider
 # ------------------------------------------------------------
 allow-lan: true
@@ -23,9 +23,12 @@ proxy-groups:
   type: url-test
   url: http://www.gstatic.com/generate_204
   use: &id001
+  - anaer
+  - au1rxx_clash
   - clashnode
   - datiya
   - oneclash
+  - radikal_clash
 - include: (加拿大|CA|Canada|Toronto|YVR|YYZ)
   interval: 300
   name: 🇨🇦 CA 加拿大
@@ -35,6 +38,12 @@ proxy-groups:
 - include: (德国|DE|Germany|Frankfurt|FRA)
   interval: 300
   name: 🇩🇪 DE 德国
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
+- include: (欧洲|EU|Europe)
+  interval: 300
+  name: 🇪🇺 EU 欧洲
   type: url-test
   url: http://www.gstatic.com/generate_204
   use: *id001
@@ -109,15 +118,19 @@ proxy-groups:
   type: url-test
   url: http://www.gstatic.com/generate_204
   use:
+  - anaer
+  - au1rxx_clash
   - clashnode
   - datiya
   - oneclash
+  - radikal_clash
 - name: 🌍 手动选择
   proxies:
   - 🚀 自动选择
   - 🇦🇺 AU 澳大利亚
   - 🇨🇦 CA 加拿大
   - 🇩🇪 DE 德国
+  - 🇪🇺 EU 欧洲
   - 🇫🇷 FR 法国
   - 🇬🇧 GB 英国
   - 🇭🇰 HK 香港
@@ -131,6 +144,20 @@ proxy-groups:
   - 🇺🇸 US 美国
   type: select
 proxy-providers:
+  anaer:
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+    path: ./nodes/anaer.yaml
+    type: file
+  au1rxx_clash:
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+    path: ./nodes/au1rxx_clash.yaml
+    type: file
   clashnode:
     health-check:
       enable: true
@@ -151,6 +178,13 @@ proxy-providers:
       interval: 300
       url: http://www.gstatic.com/generate_204
     path: ./nodes/oneclash.yaml
+    type: file
+  radikal_clash:
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+    path: ./nodes/radikal_clash.yaml
     type: file
 rules:
 - MATCH,🌍 手动选择

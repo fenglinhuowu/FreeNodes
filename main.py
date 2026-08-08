@@ -56,9 +56,14 @@ def parse_args() -> argparse.Namespace:
         help="Check mode: proxy=mihomo url-test (accurate), tcp=port probe (fast/noisy)",
     )
     parser.add_argument(
-        "--mihomo",
-        default=None,
-        help="Path to mihomo.exe (default: Sparkle sidecar from config)",
+        "--subs-only",
+        action="store_true",
+        help="Skip blog crawlers; only fetch direct subscription URLs",
+    )
+    parser.add_argument(
+        "--sites-only",
+        action="store_true",
+        help="Skip direct subscriptions; only crawl blog sites",
     )
     parser.add_argument(
         "--timeout",
@@ -158,7 +163,11 @@ async def main():
         sys.exit(1)
 
     scheduler = Scheduler(config)
-    await scheduler.run(target=args.target)
+    await scheduler.run(
+        target=args.target,
+        skip_sites=args.subs_only,
+        skip_subscriptions=args.sites_only,
+    )
     save_config(config)
 
     if args.check:
