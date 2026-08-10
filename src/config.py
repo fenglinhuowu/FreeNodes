@@ -38,7 +38,9 @@ class LLMConfig:
 class CrawlConfig:
     max_articles: int = 3
     timeout: int = 30
-    concurrency: int = 3
+    concurrency: int = 4                        # max sites in parallel
+    article_concurrency: int = 3                # max articles per site in parallel
+    download_concurrency: int = 8               # max file downloads in parallel
     proxy: str = ""                             # HTTP proxy for YouTube access
 
 
@@ -107,12 +109,18 @@ def save_config(config: Config, path: str = "config.yaml"):
         "task_routing": config.llm.task_routing,
     }
 
+    crawl_raw = {
+        "max_articles": config.crawl.max_articles,
+        "timeout": config.crawl.timeout,
+        "concurrency": config.crawl.concurrency,
+        "article_concurrency": config.crawl.article_concurrency,
+        "download_concurrency": config.crawl.download_concurrency,
+    }
+    if config.crawl.proxy:
+        crawl_raw["proxy"] = config.crawl.proxy
+
     raw = {
-        "crawl": {
-            "max_articles": config.crawl.max_articles,
-            "timeout": config.crawl.timeout,
-            "concurrency": config.crawl.concurrency,
-        },
+        "crawl": crawl_raw,
         "output": config.output,
         "sites": raw_sites,
         "llm": raw_llm,

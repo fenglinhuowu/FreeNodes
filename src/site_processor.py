@@ -39,9 +39,12 @@ class SiteProcessor:
         self.config = config
         self.site = site
         self.max_articles = config.crawl.max_articles
+        self.article_concurrency = max(1, config.crawl.article_concurrency)
+        self.download_concurrency = max(1, config.crawl.download_concurrency)
         self.output_dir = config.output.get("dir", "nodes")
         self.llm = llm
         self._base = self._derive_base(site.start_url)
+        self._pattern_lock = asyncio.Lock()
 
     # ── Public ──
 
@@ -201,28 +204,40 @@ class SiteProcessor:
             result.errors.append("no articles found")
             return result
 
-        # 3. Process each article
-        print(f"\n[3/4] Processing {len(articles)} articles...")
+        # 3. Process articles in parallel
+        print(f"\n[3/4] Processing {len(articles)} articles "
+              f"(concurrency={self.article_concurrency})...")
         all_txt: set[str] = set()
         all_yaml: set[str] = set()
         pattern_saved = False
 
-        for i, article in enumerate(articles):
-            print(f"  [{i+1}/{len(articles)}] {article['url']}")
-            article_page = await fetch_page(article["url"], timeout_ms=60000)
-            if not article_page.success:
-                result.errors.append(f"article fetch failed: {article_page.error[:80]}")
-                continue
+        article_sem = asyncio.Semaphore(self.article_concurrency)
 
-            # Try direct extraction first
-            links, saved = await self._extract_links(article_page)
+        async def _one_article(i: int, article: dict) -> tuple[list[str], bool, list[str]]:
+            async with article_sem:
+                print(f"  [{i+1}/{len(articles)}] {article['url']}")
+                article_page = await fetch_page(article["url"], timeout_ms=60000)
+                if not article_page.success:
+                    return [], False, [f"article fetch failed: {article_page.error[:80]}"]
+
+                links, saved = await self._extract_links(article_page)
+                if not links and site_type in ("yt_pwd", "youtube_password"):
+                    links = await self._try_youtube_password_flow(article_page)
+                return links, saved, []
+
+        article_results = await asyncio.gather(
+            *[_one_article(i, a) for i, a in enumerate(articles)],
+            return_exceptions=True,
+        )
+
+        for item in article_results:
+            if isinstance(item, Exception):
+                result.errors.append(f"article crashed: {item}")
+                continue
+            links, saved, errs = item
+            result.errors.extend(errs)
             if saved:
                 pattern_saved = True
-
-            # If direct extraction found nothing and site is yt_pwd, try YouTube password flow
-            if not links and site_type in ('yt_pwd', 'youtube_password'):
-                links = await self._try_youtube_password_flow(article_page)
-
             for url in links:
                 if url.endswith(".txt"):
                     all_txt.add(url)
@@ -239,32 +254,41 @@ class SiteProcessor:
             result.errors.append("no subscription links found")
             return result
 
-        # 4. Download files
-        print(f"\n[4/4] Downloading {total_links} files (up to 3 retries)...")
+        # 4. Download files in parallel
+        print(f"\n[4/4] Downloading {total_links} files "
+              f"(concurrency={self.download_concurrency}, up to 3 retries)...")
         txt_contents: list[str] = []
         yaml_contents: list[str] = []
+        download_sem = asyncio.Semaphore(self.download_concurrency)
 
-        for url in sorted(all_txt):
-            body = await self._download_retry(url)
-            if body:
-                txt_contents.append(body)
-                result.txt_count += 1
-                result.total_bytes += len(body)
-                print(f"  OK  txt: {url} ({len(body)}B)")
-            else:
-                result.errors.append(f"txt download failed: {url}")
-                print(f"  FAIL txt: {url}")
+        async def _one_download(kind: str, url: str) -> tuple[str, str, str | None]:
+            async with download_sem:
+                body = await self._download_retry(url)
+                return kind, url, body
 
-        for url in sorted(all_yaml):
-            body = await self._download_retry(url)
+        jobs = (
+            [_one_download("txt", u) for u in sorted(all_txt)]
+            + [_one_download("yaml", u) for u in sorted(all_yaml)]
+        )
+        download_results = await asyncio.gather(*jobs, return_exceptions=True)
+
+        for item in download_results:
+            if isinstance(item, Exception):
+                result.errors.append(f"download crashed: {item}")
+                continue
+            kind, url, body = item
             if body:
-                yaml_contents.append(body)
-                result.yaml_count += 1
+                if kind == "txt":
+                    txt_contents.append(body)
+                    result.txt_count += 1
+                else:
+                    yaml_contents.append(body)
+                    result.yaml_count += 1
                 result.total_bytes += len(body)
-                print(f"  OK  yaml: {url} ({len(body)}B)")
+                print(f"  OK  {kind}: {url} ({len(body)}B)")
             else:
-                result.errors.append(f"yaml download failed: {url}")
-                print(f"  FAIL yaml: {url}")
+                result.errors.append(f"{kind} download failed: {url}")
+                print(f"  FAIL {kind}: {url}")
 
         return self._save_and_finish(result, txt_contents, yaml_contents)
 
@@ -425,21 +449,22 @@ class SiteProcessor:
         """
         html = page.html
 
-        # Step 1: rule-first
-        if self.site.link_pattern:
-            # If pattern failed too many times, reset it so LLM gets retried
-            if self.site.failed_count >= 5:
-                print(f"    pattern failed {self.site.failed_count}x, resetting to null")
-                self.site.link_pattern = None
-            else:
-                result = self._extract_by_pattern(html, self.site.link_pattern)
-                if result:
-                    print(f"    regex hit: {len(result)} links (0 LLM)")
-                    self.site.failed_count = 0
-                    return result, False
+        # Step 1: rule-first (lock: pattern/failed_count shared across parallel articles)
+        async with self._pattern_lock:
+            if self.site.link_pattern:
+                # If pattern failed too many times, reset it so LLM gets retried
+                if self.site.failed_count >= 5:
+                    print(f"    pattern failed {self.site.failed_count}x, resetting to null")
+                    self.site.link_pattern = None
+                else:
+                    result = self._extract_by_pattern(html, self.site.link_pattern)
+                    if result:
+                        print(f"    regex hit: {len(result)} links (0 LLM)")
+                        self.site.failed_count = 0
+                        return result, False
 
-                self.site.failed_count += 1
-                print(f"    regex miss (failed_count={self.site.failed_count}), falling back to LLM")
+                    self.site.failed_count += 1
+                    print(f"    regex miss (failed_count={self.site.failed_count}), falling back to LLM")
 
         # Step 2: LLM fallback
         llm_result = await self.llm.extract_links(page.markdown)
@@ -476,8 +501,9 @@ class SiteProcessor:
         # Step 4: three-layer verification
         if LLMRouter.verify_pattern(new_pattern, all_links, html):
             print("    pattern verified! writing to config")
-            self.site.link_pattern = new_pattern
-            self.site.failed_count = 0
+            async with self._pattern_lock:
+                self.site.link_pattern = new_pattern
+                self.site.failed_count = 0
             return all_links, True
         else:
             print("    pattern rejected by verification, keeping null")

@@ -1,5 +1,5 @@
 # FreeNodeSpider - Merged 9 yaml files
-# Generated: 2026-08-08 04:50:26
+# Generated: 2026-08-08 22:30:56
 # Docs: https://github.com/FreeNodeSpider
 # ------------------------------------------------------------
 allow-lan: true
@@ -52207,323 +52207,575 @@ proxies:
     headers:
       Host: twilight-poetry-2bfe.218-699.workers.dev
     path: /pyip=Telegram-WangCai2🇨🇳
-- client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇮🇹_IT_意大利
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
   network: ws
-  port: 7443
-  server: 222.167.202.32
-  servername: 2026.hhhhh.eu.org
+  port: 2086
+  server: 104.19.47.80
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- cipher: aes-256-gcm
+  name: 🇨🇦_CA_加拿大
+  password: KixLvKzwjekG00rm
+  port: 5500
+  server: 23.154.136.106
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_1_2
+  network: ws
+  port: 2052
+  server: 104.20.17.196
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_2
+  network: ws
+  port: 2052
+  server: 104.19.47.75
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+  network: ws
+  port: 2052
+  server: 104.20.25.146
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+  network: ws
+  port: 2052
+  server: 104.19.57.24
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
+  network: ws
+  port: 2052
+  server: 104.17.106.171
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
+  network: ws
+  port: 2052
+  server: 172.67.74.122
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
+  network: ws
+  port: 2086
+  server: 172.64.99.22
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_7
+  network: ws
+  port: 2086
+  server: 104.19.46.17
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- cipher: chacha20-ietf-poly1305
+  name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  password: 70747514-fb14-4f31-8390-e1f0453eff6d
+  port: 20014
+  server: jp2.mhw7e2.online
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_8
+  network: ws
+  port: 2052
+  server: 172.64.198.249
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_9
+  network: ws
+  port: 2086
+  server: 104.26.5.112
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_10
+  network: ws
+  port: 2052
+  server: 104.17.106.151
+  sni: cdn1.freegradely.xyz
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_3_2
+  network: ws
+  port: 2086
+  server: 23.227.38.6
+  sni: ''
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_11
+  network: ws
+  port: 2086
+  server: 104.19.47.79
+  sni: ip2.1457230.xyz
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_12
+  network: ws
+  port: 2086
+  server: 172.64.166.28
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- cipher: aes-256-gcm
+  name: 🇺🇸_US_美国_4
+  password: kDWvXYZoTBcGkC4
+  port: 8882
+  server: 38.86.135.141
+  type: ss
+- cipher: aes-128-cfb
+  name: 🇳🇱_NL_荷兰_2
+  password: shadowsocks
+  port: 443
+  server: sha.majidcttls.ggff.net
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_5
+  network: ws
+  port: 2052
+  server: 104.19.38.22
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- cipher: aes-256-cfb
+  name: 🇩🇪_DE_德国_2
+  password: f8f7aCzcPKbsF8p3
+  port: 989
+  server: 46.183.185.37
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_6
+  network: ws
+  port: 2052
+  server: 104.19.21.81
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_13
+  network: ws
+  port: 2086
+  server: 172.64.166.22
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_7
+  network: ws
+  port: 2086
+  server: 104.16.148.244
+  sni: ip006.freegradely.xyz
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+- cipher: aes-256-cfb
+  name: 🇷🇺_RU_俄罗斯
+  password: GA9KzeEgvfxNrgmM
+  port: 9019
+  server: 80.92.204.106
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国_8
+  network: ws
+  port: 2052
+  server: 172.64.194.76
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_14
+  network: ws
+  port: 2086
+  server: 104.19.21.63
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_15
+  network: ws
+  port: 2052
+  server: 104.26.7.132
+  sni: ''
+  type: vmess
+  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_16
+  network: ws
+  port: 2086
+  server: 104.19.46.56
+  sni: ip2.1457230.xyz
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_17
+  network: ws
+  port: 2086
+  server: 172.64.233.9
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_18
+  network: ws
+  port: 2086
+  server: 104.19.38.62
+  sni: ''
+  type: vmess
+  uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_19
+  network: ws
+  port: 2086
+  server: 172.64.233.24
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_20
+  network: ws
+  port: 2086
+  server: 104.19.45.13
+  sni: ''
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+- cipher: aes-256-cfb
+  name: 🇻🇳_VN_越南
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.181
+  type: ss
+  udp: true
+- name: 🇳🇱_NL_荷兰->🇺🇸_US_美国
+  network: ws
+  port: 2096
+  server: 188.42.88.238
+  servername: sni.jpmj.dev
   tls: true
   type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.32:7443
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国
+      Host: sni.jpmj.dev
+- name: 🇧🇿_BZ_伯利兹
   network: ws
-  port: 7443
-  server: 222.167.202.47
-  servername: 2026.hhhhh.eu.org
+  port: 2096
+  server: 45.131.6.191
+  servername: sni.my111000.tech
   tls: true
   type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.47:7443
+      Host: sni.my111000.tech
+    path: Telegram%F0%9F%87%A8%F0%9F%87%B3@WangCai2/
+- name: 🇺🇸_US_美国
+  network: ws
+  port: 443
+  server: 135.84.73.245
+  servername: sni.111000.dynv6.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+- cipher: aes-256-cfb
+  name: 🇻🇳_VN_越南_1
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.166
+  type: ss
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇨🇭_CH_瑞士_2
-  port: 443
+  name: 🇫🇮_FI_芬兰
+  port: 18038
   reality-opts:
-    public-key: gwuAehnMX6e-n1fxIenfjx43j3qXXi7Cb4wfnW5VyBQ
-    short-id: f04729f65b9ea261
-  server: nl1.samovargate.com
+    public-key: UDLhjunZjP-5A6KBMeuWe3qp_FusLAshcQIcCF7EZh8
+    short-id: ce9f790791426d83
+  server: 144.31.82.47
   servername: www.microsoft.com
   tls: true
   type: vless
-  uuid: 82b5b465-3307-4a25-acef-abd1649bbedf
-- client-fingerprint: chrome
-  name: 🇩🇪_DE_德国_2
-  network: ws
-  port: 8443
-  server: 89.58.40.177
-  servername: sni.111000.v6.navy
+  udp: true
+  uuid: a42c8b66-d0a7-4b49-9143-b98f1c84edba
+- client-fingerprint: qq
+  flow: xtls-rprx-vision
+  name: 🇯🇵_JP_日本->🇹🇼_TW_中国台湾
+  port: 55309
+  reality-opts:
+    public-key: 7BS-JUFgYVaWrwwyDSiVq_YDoG36w8cRd4U8HvEg-F0
+    short-id: 4bcbc85d
+  server: 216.23.108.4
+  servername: download.windowsupdate.com
   tls: true
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: /
-- name: 🇨🇳_CN_中国->🇮🇹_IT_意大利_1
-  network: ws
-  port: 7443
-  server: 222.167.202.60
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.60:7443
-- name: 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
-  network: ws
-  port: 8443
-  server: 5.34.209.231
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: /
-- client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  network: ws
-  port: 7443
-  server: 222.167.202.3
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.3:7443
-- client-fingerprint: chrome
-  name: 🇺🇸_US_美国
-  network: ws
-  port: 443
-  server: 104.19.58.118
-  servername: us1-us1.aiopen.sbs
-  tls: true
-  type: vless
-  uuid: 340dee85-bfd7-4395-8d2e-87dbc2781a13
-  ws-opts:
-    headers:
-      Host: us1-us1.aiopen.sbs
-    path: /kbjc/us1
-- client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇮🇹_IT_意大利_2
-  network: ws
-  port: 7443
-  server: 222.167.202.21
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.21:7443
-- name: 🇨🇳_CN_中国->🇮🇹_IT_意大利_3
-  network: ws
-  port: 7443
-  server: 222.167.202.70
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.70:7443
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-  network: ws
-  port: 7443
-  server: 222.167.202.23
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.23:7443
-- client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-  network: ws
-  port: 7443
-  server: 222.167.202.50
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.50:7443
-- name: 🇨🇳_CN_中国->🇮🇹_IT_意大利_4
-  network: ws
-  port: 7443
-  server: 222.167.202.35
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.35:7443
-- name: 🇫🇷_FR_法国_2
-  network: ws
-  port: 8443
-  server: 146.59.230.8
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-- cipher: aes-256-cfb
-  name: 未知_1
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.30
-  type: ss
-- cipher: aes-256-cfb
-  name: 未知_2
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.75
-  type: ss
-- name: 🇨🇳_CN_中国->🇮🇹_IT_意大利_5
-  network: ws
-  port: 7443
-  server: 222.167.202.36
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.36:7443
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
-  network: ws
-  port: 7443
-  server: 222.167.202.22
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.22:7443
-- cipher: aes-256-cfb
-  name: 未知_3
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  port: 38388
-  server: 103.186.155.62
-  type: ss
-- client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇮🇹_IT_意大利_6
-  network: ws
-  port: 7443
-  server: 222.167.202.4
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.4:7443
-- client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇮🇹_IT_意大利_7
-  network: ws
-  port: 7443
-  server: 222.167.202.52
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.52:7443
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_5
-  network: ws
-  port: 7443
-  server: 222.167.202.33
-  servername: 2026.hhhhh.eu.org
-  tls: true
-  type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.33:7443
+  udp: true
+  uuid: 9c5d1bf0-d58b-4001-9e7c-0c1fa314068c
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🇺🇸_US_美国_1_2
-  port: 10001
+  name: 🇯🇵_JP_日本
+  port: 55305
   reality-opts:
-    public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
-    short-id: fb2c6678
-  server: 156.229.161.107
-  servername: www.icloud.com
+    public-key: 7BS-JUFgYVaWrwwyDSiVq_YDoG36w8cRd4U8HvEg-F0
+    short-id: 4bcbc85d
+  server: 216.23.108.4
+  servername: download.windowsupdate.com
   tls: true
   type: vless
-  uuid: 9c79aceb-4649-44ea-9698-b5e9ecf6d6da
+  udp: true
+  uuid: 9c5d1bf0-d58b-4001-9e7c-0c1fa314068c
 - client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇺🇸_US_美国_6
-  network: ws
-  port: 7443
-  server: 222.167.202.10
-  servername: 2026.hhhhh.eu.org
+  flow: xtls-rprx-vision
+  name: 🇬🇧_GB_英国
+  port: 443
+  server: london1.ap221.com
+  servername: london.ap221.com
   tls: true
   type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.10:7443
-- client-fingerprint: chrome
-  name: 🇨🇳_CN_中国->🇺🇸_US_美国_7
+  udp: true
+  uuid: 3a1d7c1d-09c6-4c81-8e11-75dd4ab1ac07
+- name: 🇰🇷_KR_韩国
   network: ws
-  port: 7443
-  server: 222.167.202.16
-  servername: 2026.hhhhh.eu.org
+  port: 38241
+  server: 59.4.161.71
+  servername: sni.111000.v6.army
   tls: true
   type: vless
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  ws-opts:
-    headers:
-      Host: 2026.hhhhh.eu.org
-    path: /222.167.202.16:7443
-- client-fingerprint: chrome
-  name: 🇺🇸_US_美国->🇱🇹_LT_立陶宛
-  network: ws
-  port: 2053
-  server: 45.43.76.184
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
+  udp: true
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.v6.navy
+      Host: sni.111000.v6.army
     path: /?ed=2560
-- client-fingerprint: chrome
-  name: 🇬🇧_GB_英国->🇳🇱_NL_荷兰
-  network: ws
-  port: 8443
-  server: 91.84.101.164
-  servername: sni.111000.v6.navy
+- cipher: aes-256-cfb
+  name: 🇻🇳_VN_越南_2
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.174
+  type: ss
+  udp: true
+- client-fingerprint: safari
+  flow: xtls-rprx-vision
+  name: 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+  port: 55313
+  reality-opts:
+    public-key: 7BS-JUFgYVaWrwwyDSiVq_YDoG36w8cRd4U8HvEg-F0
+    short-id: 4bcbc85d
+  server: 216.23.108.4
+  servername: download.windowsupdate.com
   tls: true
   type: vless
+  udp: true
+  uuid: 9c5d1bf0-d58b-4001-9e7c-0c1fa314068c
+- cipher: aes-256-cfb
+  name: 🇻🇳_VN_越南_3
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.40
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: 🇹🇭_TH_泰国
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 47.81.36.237
+  servername: api.digital-help-prd.autodesk.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- name: 🇰🇷_KR_韩国_1
+  network: ws
+  port: 10333
+  server: 121.175.77.73
+  servername: sni.111000.v6.army
+  tls: true
+  type: vless
+  udp: true
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: sni.111000.v6.navy
+      Host: sni.111000.v6.army
     path: /?ed=2560
+- flow: xtls-rprx-vision
+  name: 🇺🇸_US_美国_2_2
+  port: 17195
+  server: 104.250.239.8
+  servername: usvless.yydzx.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2219a1b1-9290-4ac5-94fd-6cfc1fb25280
+- name: 🇯🇵_JP_日本_1
+  network: ws
+  port: 443
+  server: 158.51.110.12
+  servername: pagescm.freen5.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: ae0dd58e-e222-40bf-84ae-365a97532737
+  ws-opts:
+    headers:
+      Host: pagescm.freen5.cc.cd
+    path: /showfp=chrome
+- name: 🇺🇸_US_美国_3_3
+  network: ws
+  port: 443
+  server: 104.17.101.139
+  servername: sni.111000.dynv6.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.dynv6.net
+    path: /?proxyip=ip.111000.de5.net%3A443
+- cipher: chacha20-ietf
+  name: 🇭🇰_HK_中国香港
+  password: asd123456
+  port: 8388
+  server: 103.149.182.105
+  type: ss
+  udp: true
+- name: 🇰🇿_KZ_哈萨克斯坦
+  network: ws
+  port: 443
+  server: 31.43.179.238
+  servername: sni.jpmj.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.jpmj.dev
+- client-fingerprint: chrome
+  name: 🇺🇸_US_美国_4_2
+  network: ws
+  port: 2096
+  server: 139.64.235.238
+  servername: sni.jpmj.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.jpmj.dev
+    path: /
+- name: 🇺🇸_US_美国_5_2
+  network: ws
+  port: 2096
+  server: 45.153.7.191
+  servername: sni.my111000.tech
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.my111000.tech
+- name: 🇺🇸_US_美国_6_2
+  network: ws
+  port: 443
+  server: 162.159.17.207
+  servername: sni.111000.v6.army
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: sni.111000.v6.army
+    path: /?https%3A%2F%2Ft.me%2Fwangcai2%F0%9F%87%A8%F0%9F%87%B3=
+- cipher: aes-256-cfb
+  name: 🇻🇳_VN_越南_4
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.155.114
+  type: ss
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇻🇳_VN_越南_5
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  port: 38388
+  server: 103.186.154.234
+  type: ss
+  udp: true
+- name: 🇨🇾_CY_塞浦路斯
+  network: ws
+  port: 8880
+  server: 77.37.33.40
+  tls: false
+  type: vless
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime57.workers.dev
+    path: /?ed=2560&https://t.me/youtube@ZYFXS🇨🇳
+- cipher: aes-128-gcm
+  name: 🇷🇺_RU_俄罗斯_2
+  password: 6784aee2-0dfe-474f-8446-480259ff9918
+  port: 442
+  server: ru.safepass.click
+  type: ss
+  udp: true
 - name: 🇰🇷 韩国(yudou789.top 玉豆免费节点)
   port: 0
   server: '@...'
@@ -56391,33 +56643,66 @@ proxy-groups:
   - 🇭🇰HK香港丨yoyapai.com_4_2
   - 🇭🇰HK香港丨yoyapai.com_5_2
   - 🇭🇰HK香港丨yoyapai.com_6
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇭_CH_瑞士_2
-  - 🇩🇪_DE_德国_2
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_1
-  - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_2
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_3
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_4
-  - 🇫🇷_FR_法国_2
-  - 未知_1
-  - 未知_2
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_5
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_4
-  - 未知_3
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_6
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_7
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_5
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+  - 🇨🇦_CA_加拿大
   - 🇺🇸_US_美国_1_2
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_6
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_7
-  - 🇺🇸_US_美国->🇱🇹_LT_立陶宛
-  - 🇬🇧_GB_英国->🇳🇱_NL_荷兰
+  - 🇺🇸_US_美国_2
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_7
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_8
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_9
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_10
+  - 🇺🇸_US_美国_3_2
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_11
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_12
+  - 🇺🇸_US_美国_4
+  - 🇳🇱_NL_荷兰_2
+  - 🇺🇸_US_美国_5
+  - 🇩🇪_DE_德国_2
+  - 🇺🇸_US_美国_6
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_13
+  - 🇺🇸_US_美国_7
+  - 🇷🇺_RU_俄罗斯
+  - 🇺🇸_US_美国_8
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_14
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_15
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_16
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_17
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_18
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_19
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_20
+  - 🇻🇳_VN_越南
+  - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+  - 🇧🇿_BZ_伯利兹
+  - 🇺🇸_US_美国
+  - 🇻🇳_VN_越南_1
+  - 🇫🇮_FI_芬兰
+  - 🇯🇵_JP_日本->🇹🇼_TW_中国台湾
+  - 🇯🇵_JP_日本
+  - 🇬🇧_GB_英国
+  - 🇰🇷_KR_韩国
+  - 🇻🇳_VN_越南_2
+  - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+  - 🇻🇳_VN_越南_3
+  - 🇹🇭_TH_泰国
+  - 🇰🇷_KR_韩国_1
+  - 🇺🇸_US_美国_2_2
+  - 🇯🇵_JP_日本_1
+  - 🇺🇸_US_美国_3_3
+  - 🇭🇰_HK_中国香港
+  - 🇰🇿_KZ_哈萨克斯坦
+  - 🇺🇸_US_美国_4_2
+  - 🇺🇸_US_美国_5_2
+  - 🇺🇸_US_美国_6_2
+  - 🇻🇳_VN_越南_4
+  - 🇻🇳_VN_越南_5
+  - 🇨🇾_CY_塞浦路斯
+  - 🇷🇺_RU_俄罗斯_2
   - 🇰🇷 韩国(yudou789.top 玉豆免费节点)
   - 🇺🇸 美国(yudou789.top 玉豆免费节点) 2
   - 🇺🇸 美国(yudou789.top 玉豆免费节点) 8
@@ -60213,33 +60498,66 @@ proxy-groups:
   - 🇭🇰HK香港丨yoyapai.com_4_2
   - 🇭🇰HK香港丨yoyapai.com_5_2
   - 🇭🇰HK香港丨yoyapai.com_6
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇭_CH_瑞士_2
-  - 🇩🇪_DE_德国_2
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_1
-  - 🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_2
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_3
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_4
-  - 🇫🇷_FR_法国_2
-  - 未知_1
-  - 未知_2
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_5
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_4
-  - 未知_3
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_6
-  - 🇨🇳_CN_中国->🇮🇹_IT_意大利_7
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_5
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+  - 🇨🇦_CA_加拿大
   - 🇺🇸_US_美国_1_2
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_6
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_7
-  - 🇺🇸_US_美国->🇱🇹_LT_立陶宛
-  - 🇬🇧_GB_英国->🇳🇱_NL_荷兰
+  - 🇺🇸_US_美国_2
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_7
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_8
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_9
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_10
+  - 🇺🇸_US_美国_3_2
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_11
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_12
+  - 🇺🇸_US_美国_4
+  - 🇳🇱_NL_荷兰_2
+  - 🇺🇸_US_美国_5
+  - 🇩🇪_DE_德国_2
+  - 🇺🇸_US_美国_6
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_13
+  - 🇺🇸_US_美国_7
+  - 🇷🇺_RU_俄罗斯
+  - 🇺🇸_US_美国_8
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_14
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_15
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_16
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_17
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_18
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_19
+  - 🇺🇸_US_美国->🇨🇦_CA_加拿大_20
+  - 🇻🇳_VN_越南
+  - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+  - 🇧🇿_BZ_伯利兹
+  - 🇺🇸_US_美国
+  - 🇻🇳_VN_越南_1
+  - 🇫🇮_FI_芬兰
+  - 🇯🇵_JP_日本->🇹🇼_TW_中国台湾
+  - 🇯🇵_JP_日本
+  - 🇬🇧_GB_英国
+  - 🇰🇷_KR_韩国
+  - 🇻🇳_VN_越南_2
+  - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
+  - 🇻🇳_VN_越南_3
+  - 🇹🇭_TH_泰国
+  - 🇰🇷_KR_韩国_1
+  - 🇺🇸_US_美国_2_2
+  - 🇯🇵_JP_日本_1
+  - 🇺🇸_US_美国_3_3
+  - 🇭🇰_HK_中国香港
+  - 🇰🇿_KZ_哈萨克斯坦
+  - 🇺🇸_US_美国_4_2
+  - 🇺🇸_US_美国_5_2
+  - 🇺🇸_US_美国_6_2
+  - 🇻🇳_VN_越南_4
+  - 🇻🇳_VN_越南_5
+  - 🇨🇾_CY_塞浦路斯
+  - 🇷🇺_RU_俄罗斯_2
   - 🇰🇷 韩国(yudou789.top 玉豆免费节点)
   - 🇺🇸 美国(yudou789.top 玉豆免费节点) 2
   - 🇺🇸 美国(yudou789.top 玉豆免费节点) 8

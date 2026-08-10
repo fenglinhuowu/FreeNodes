@@ -1,5 +1,7 @@
 crawl:
-  concurrency: 2
+  article_concurrency: 3
+  concurrency: 4
+  download_concurrency: 8
   max_articles: 3
   timeout: 30
 llm:
@@ -70,7 +72,7 @@ sites:
     contain clash/v2ray subscription links
   link_pattern: https://oss\.oneclash\.cc/\d{4}/\d{2}/\d{8}\.(?:txt|yaml)
   name: oneclash
-  node_count: 2
+  node_count: 4
   start_url: https://oneclash.cc/freenode/
   type: simple
   up_date: '2026-08-08'
@@ -115,10 +117,9 @@ sites:
 - description: YouTube channel, each video description contains a Google Drive link,
     zip file contains subscription files
   name: fxrj
-  node_count: 6
   start_url: https://www.youtube.com/@fxrj/videos/
   type: cloud_drive
-  up_date: '2026-07-23'
+  up_date: '2026-08-08'
   yt_hint: video description has '本期资源下载地址' section with drive link
 - description: YouTube channel, each video description contains a paste.to link, paste.to
     requires password from subtitles
@@ -126,5 +127,5 @@ sites:
   pwd_hint: 4-digit password from video subtitles, paste.to fragment key also in description
   start_url: https://www.youtube.com/@ZYFXS/videos/
   type: cloud_drive
-  up_date: '2026-07-23'
+  up_date: '2026-08-08'
   yt_hint: video description contains '本期资源' paste.to link with fragment key
