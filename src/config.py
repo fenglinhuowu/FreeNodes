@@ -2,6 +2,17 @@
 import yaml
 from dataclasses import dataclass, field
 
+from src.node_tester import CheckConfig
+
+
+@dataclass
+class SubscriptionConfig:
+    name: str
+    url: str
+    kind: str = "auto"  # auto | txt | yaml
+    mirrors: list[str] = field(default_factory=list)
+    enabled: bool = True
+
 
 @dataclass
 class SiteConfig:
@@ -50,6 +61,8 @@ class Config:
     crawl: CrawlConfig
     output: dict
     llm: LLMConfig
+    check: CheckConfig = field(default_factory=CheckConfig)
+    subscriptions: list[SubscriptionConfig] = field(default_factory=list)
 
 
 def load_config(path: str = "config.yaml") -> Config:
@@ -65,7 +78,24 @@ def load_config(path: str = "config.yaml") -> Config:
     providers = [ProviderConfig(**p) for p in llm_raw.get("providers", [])]
     llm = LLMConfig(providers=providers, task_routing=llm_raw.get("task_routing", {}))
 
-    return Config(sites=sites, crawl=crawl, output=output, llm=llm)
+    check_raw = raw.get("check") or {}
+    check = CheckConfig(**{
+        k: v for k, v in check_raw.items() if k in CheckConfig.__dataclass_fields__
+    })
+
+    subs = []
+    for s in raw.get("subscriptions") or []:
+        fields = {k: v for k, v in s.items() if k in SubscriptionConfig.__dataclass_fields__}
+        subs.append(SubscriptionConfig(**fields))
+
+    return Config(
+        sites=sites,
+        crawl=crawl,
+        output=output,
+        llm=llm,
+        check=check,
+        subscriptions=subs,
+    )
 
 
 def save_config(config: Config, path: str = "config.yaml"):
@@ -119,10 +149,42 @@ def save_config(config: Config, path: str = "config.yaml"):
     if config.crawl.proxy:
         crawl_raw["proxy"] = config.crawl.proxy
 
+    check_raw = {
+        "enabled": config.check.enabled,
+        "timeout": config.check.timeout,
+        "concurrency": config.check.concurrency,
+        "save_alive": config.check.save_alive,
+        "alive_file": config.check.alive_file,
+        "mode": config.check.mode,
+        "mihomo_path": config.check.mihomo_path,
+        "test_url": config.check.test_url,
+        "batch_size": config.check.batch_size,
+        "max_sparkle": config.check.max_sparkle,
+        "parallel_batches": config.check.parallel_batches,
+        "speed_enabled": config.check.speed_enabled,
+        "min_mbps": config.check.min_mbps,
+        "speed_bytes": config.check.speed_bytes,
+        "speed_timeout": config.check.speed_timeout,
+        "speed_concurrency": config.check.speed_concurrency,
+        "speed_url": config.check.speed_url,
+        "compat_urls": list(config.check.compat_urls or []),
+    }
+
     raw = {
         "crawl": crawl_raw,
         "output": config.output,
+        "check": check_raw,
         "sites": raw_sites,
+        "subscriptions": [
+            {
+                "name": s.name,
+                "url": s.url,
+                "kind": s.kind,
+                "enabled": s.enabled,
+                **({"mirrors": s.mirrors} if s.mirrors else {}),
+            }
+            for s in config.subscriptions
+        ],
         "llm": raw_llm,
     }
 

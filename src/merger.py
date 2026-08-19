@@ -46,8 +46,19 @@ REGION_KEYWORDS: dict[str, list[str]] = {
 class Merger:
     """Merge site output files into cross-site aggregated files."""
 
-    def __init__(self, nodes_dir: str = "nodes"):
+    SKIP_TXT = {
+        "merged.txt", "merged_raw.txt", "alive.txt", "alive_speed.txt", "v2rayn.txt",
+    }
+    SKIP_YAML = {"merged.yaml", "provider.yaml", "sparkle.yaml", "sparkle_from_json.yaml"}
+
+    def __init__(self, nodes_dir: str = "nodes", only_names: set[str] | None = None):
         self.nodes_dir = Path(nodes_dir)
+        self.only_names = only_names
+
+    def _allowed(self, path: Path) -> bool:
+        if self.only_names is None:
+            return True
+        return path.stem in self.only_names
 
     def run(self) -> MergeResult:
         """Run all three merge stages and return results."""
@@ -66,7 +77,7 @@ class Merger:
         seen: set[str] = set()
 
         for f in sorted(self.nodes_dir.glob("*.txt")):
-            if f.name == "merged.txt":
+            if f.name in self.SKIP_TXT or not self._allowed(f):
                 continue
             result.txt_sources += 1
             try:
@@ -105,7 +116,7 @@ class Merger:
 
         all_proxies: list[dict] = []
         for f in sorted(self.nodes_dir.glob("*.yaml")):
-            if f.name in ("merged.yaml", "provider.yaml"):
+            if f.name in self.SKIP_YAML or not self._allowed(f):
                 continue
             result.yaml_sources += 1
             try:
@@ -137,8 +148,10 @@ class Merger:
         """Build a Clash Meta config using proxy-provider references."""
         import yaml
 
-        yaml_files = sorted(f for f in self.nodes_dir.glob("*.yaml")
-                           if f.name not in ("merged.yaml", "provider.yaml"))
+        yaml_files = sorted(
+            f for f in self.nodes_dir.glob("*.yaml")
+            if f.name not in self.SKIP_YAML and self._allowed(f)
+        )
         if not yaml_files:
             return ""
 

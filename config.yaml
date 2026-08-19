@@ -1,3 +1,22 @@
+check:
+  alive_file: alive.txt
+  batch_size: 200
+  compat_urls: []
+  concurrency: 80
+  enabled: true
+  max_sparkle: 300
+  mihomo_path: D:\Program Files\Sparkle\resources\sidecar\mihomo.exe
+  min_mbps: 0.1
+  mode: proxy
+  parallel_batches: 4
+  save_alive: true
+  speed_bytes: 200000
+  speed_concurrency: 8
+  speed_enabled: false
+  speed_timeout: 12.0
+  speed_url: http://cachefly.cachefly.net/200kb.test
+  test_url: http://www.gstatic.com/generate_204
+  timeout: 5.0
 crawl:
   article_concurrency: 3
   concurrency: 4
@@ -53,7 +72,7 @@ sites:
   name: nodev2ray
   start_url: https://nodev2ray.com/free-node/
   type: simple
-  up_date: '2026-08-08'
+  up_date: '2026-08-10'
 - description: blog with dated articles (URLs contain YYYY-M-D), each article lists
     clash/v2ray/sing-box subscription file links
   name: freeclashnode
@@ -64,18 +83,18 @@ sites:
     txt/yaml subscription links
   link_pattern: https://node\.clashnode\.cc/uploads/\d{4}/\d{2}/(?:\d+-\d{8}\.(?:txt|yaml)|\d{8}\.json)
   name: clashnode
-  node_count: 9
+  node_count: 8
   start_url: https://clashnode.cc/free-node/
   type: simple
-  up_date: '2026-08-08'
+  up_date: '2026-08-13'
 - description: blog with article titles containing dates (month-day format), articles
     contain clash/v2ray subscription links
   link_pattern: https://oss\.oneclash\.cc/\d{4}/\d{2}/\d{8}\.(?:txt|yaml)
   name: oneclash
-  node_count: 4
+  node_count: 6
   start_url: https://oneclash.cc/freenode/
   type: simple
-  up_date: '2026-08-08'
+  up_date: '2026-08-13'
 - description: blogger blog, article dates in title as 'YYYY年MM月DD日', each post contains
     subscription links
   link_pattern: https://nodebuf\.com/files/public/[a-z0-9]+/preview
@@ -94,7 +113,7 @@ sites:
   node_count: 6
   start_url: https://clashstair.com/category/freenode/
   type: simple
-  up_date: '2026-08-08'
+  up_date: '2026-08-10'
 - description: blog with dates in both title ('YYYY年MM月DD日') and URL (/post/YYYYMMDD/),
     each post has subscription links
   link_pattern: https://free\.datiya\.com/uploads/\d{8}-[A-Za-z0-9_-]+\.(?:txt|yaml)
@@ -102,7 +121,7 @@ sites:
   node_count: 3
   start_url: https://free.datiya.com/
   type: simple
-  up_date: '2026-08-08'
+  up_date: '2026-08-13'
 - description: blog with password-protected articles, password from YouTube video
     subtitles (4-digit AABB/ABAB)
   link_pattern: https://hh\.yudou226\.top/\d{6}/\d{8}[a-z0-9]+\.[a-z]{3,4}
@@ -111,7 +130,7 @@ sites:
   pwd_hint: 4-digit AABB or ABAB pattern, password verbally given in YouTube video
   start_url: https://www.yudou789.top/category/jiedian/
   type: yt_pwd
-  up_date: '2026-08-08'
+  up_date: '2026-08-13'
   yt_hint: each article has a YouTube link, video subtitles contain the decryption
     password
 - description: YouTube channel, each video description contains a Google Drive link,
@@ -129,3 +148,64 @@ sites:
   type: cloud_drive
   up_date: '2026-08-08'
   yt_hint: video description contains '本期资源' paste.to link with fragment key
+subscriptions:
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/all/configs_base64.txt
+  name: radikal
+  url: https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/all/configs_base64.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/light/configs_base64.txt
+  name: radikal_light
+  url: https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/light/configs_base64.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt
+  name: au1rxx
+  url: https://cdn.jsdelivr.net/gh/Au1rxx/free-vpn-subscriptions@main/output/v2ray-base64.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray
+  name: mfuu
+  url: https://cdn.jsdelivr.net/gh/mfuu/v2ray@master/v2ray
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
+  name: matin
+  url: https://cdn.jsdelivr.net/gh/MatinGhanbari/v2ray-configs@main/subscriptions/v2ray/all_sub.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/US.txt
+  name: fn_us
+  url: https://cdn.jsdelivr.net/gh/rtwo2/FastNodes@main/sub/countries/US.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/JP.txt
+  name: fn_jp
+  url: https://cdn.jsdelivr.net/gh/rtwo2/FastNodes@main/sub/countries/JP.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/SG.txt
+  name: fn_sg
+  url: https://cdn.jsdelivr.net/gh/rtwo2/FastNodes@main/sub/countries/SG.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/countries/HK.txt
+  name: fn_hk
+  url: https://cdn.jsdelivr.net/gh/rtwo2/FastNodes@main/sub/countries/HK.txt
+- enabled: true
+  kind: txt
+  mirrors:
+  - https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+  name: pawdroid
+  url: https://cdn.jsdelivr.net/gh/Pawdroid/Free-servers@main/sub

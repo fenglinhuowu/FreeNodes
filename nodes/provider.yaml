@@ -1,5 +1,5 @@
 # FreeNodeSpider - Proxy-provider based config (for Clash Meta / Mihomo)
-# Generated: 2026-08-08 22:31:03
+# Generated: 2026-08-13 11:11:28
 # Docs: https://github.com/FreeNodeSpider
 # ------------------------------------------------------------
 allow-lan: true
@@ -23,15 +23,7 @@ proxy-groups:
   type: url-test
   url: http://www.gstatic.com/generate_204
   use: &id001
-  - clashmeta
-  - clashnode
-  - clashstair
-  - datiya
-  - freeclashnode
-  - fxrj
-  - nodev2ray
-  - oneclash
-  - yudou
+  - anaer
 - include: (加拿大|CA|Canada|Toronto|YVR|YYZ)
   interval: 300
   name: 🇨🇦 CA 加拿大
@@ -44,6 +36,12 @@ proxy-groups:
   type: url-test
   url: http://www.gstatic.com/generate_204
   use: *id001
+- include: (欧洲|EU|Europe)
+  interval: 300
+  name: 🇪🇺 EU 欧洲
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  use: *id001
 - include: (法国|FR|France|Paris)
   interval: 300
   name: 🇫🇷 FR 法国
@@ -53,12 +51,6 @@ proxy-groups:
 - include: (英国|GB|UK|United Kingdom|London|LHR)
   interval: 300
   name: 🇬🇧 GB 英国
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  use: *id001
-- include: (香港|HK|Hong Kong|HongKong|HKG)
-  interval: 300
-  name: 🇭🇰 HK 香港
   type: url-test
   url: http://www.gstatic.com/generate_204
   use: *id001
@@ -98,12 +90,6 @@ proxy-groups:
   type: url-test
   url: http://www.gstatic.com/generate_204
   use: *id001
-- include: (台湾|TW|Taiwan|Taipei|TPE)
-  interval: 300
-  name: 🇹🇼 TW 台湾
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  use: *id001
 - include: (美国|US|United States|USA|America|LAX|SJC)
   interval: 300
   name: 🇺🇸 US 美国
@@ -115,96 +101,31 @@ proxy-groups:
   type: url-test
   url: http://www.gstatic.com/generate_204
   use:
-  - clashmeta
-  - clashnode
-  - clashstair
-  - datiya
-  - freeclashnode
-  - fxrj
-  - nodev2ray
-  - oneclash
-  - yudou
+  - anaer
 - name: 🌍 手动选择
   proxies:
   - 🚀 自动选择
   - 🇦🇺 AU 澳大利亚
   - 🇨🇦 CA 加拿大
   - 🇩🇪 DE 德国
+  - 🇪🇺 EU 欧洲
   - 🇫🇷 FR 法国
   - 🇬🇧 GB 英国
-  - 🇭🇰 HK 香港
   - 🇮🇳 IN 印度
   - 🇯🇵 JP 日本
   - 🇰🇷 KR 韩国
   - 🇳🇱 NL 荷兰
   - 🇷🇺 RU 俄罗斯
   - 🇸🇬 SG 新加坡
-  - 🇹🇼 TW 台湾
   - 🇺🇸 US 美国
   type: select
 proxy-providers:
-  clashmeta:
+  anaer:
     health-check:
       enable: true
       interval: 300
       url: http://www.gstatic.com/generate_204
-    path: ./nodes/clashmeta.yaml
-    type: file
-  clashnode:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/clashnode.yaml
-    type: file
-  clashstair:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/clashstair.yaml
-    type: file
-  datiya:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/datiya.yaml
-    type: file
-  freeclashnode:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/freeclashnode.yaml
-    type: file
-  fxrj:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/fxrj.yaml
-    type: file
-  nodev2ray:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/nodev2ray.yaml
-    type: file
-  oneclash:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/oneclash.yaml
-    type: file
-  yudou:
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
-    path: ./nodes/yudou.yaml
+    path: ./nodes/anaer.yaml
     type: file
 rules:
 - MATCH,🌍 手动选择
