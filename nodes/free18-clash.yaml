@@ -1,0 +1,1840 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#🚀 节点选择
+      - https://8.8.8.8/dns-query#🚀 节点选择
+proxies:
+  - name: 每天更新，请加电报群防止失联
+    type: vless
+    server: 95.85.227.241
+    port: 443
+    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+    servername: proxy3d.h1guro.ovh
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: dlX12huNd8CRSGgKGCwi1GiCLFtmRxY9b7ywKCIyWXo
+      short-id: 25934afbedc65791
+    skip-cert-verify: true
+    udp: true
+  - name: 电报群：https://t.me/vvkj11
+    type: trojan
+    server: 37.9.4.182
+    port: 8443
+    password: ymk9eBP4Ams3-ncYCV4kDAezUzBfkR8x
+    sni: denode201.velox-network.org
+    skip-cert-verify: true
+    udp: true
+  - name: 日期：10-03
+    type: trojan
+    server: 194.55.239.121
+    port: 8443
+    password: ymk9eBP4Ams3-ncYCV4kDAezUzBfkR8x
+    sni: api-v2.captaingold.app
+    skip-cert-verify: true
+    udp: true
+  - name: 免费VPN：https://tt.vg/FJOE2Mm
+    type: vless
+    server: 46.28.71.154
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    servername: spanish67.kovsh.lol
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+      short-id: ff776ff77be48b88
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪_德国_5
+    type: vless
+    server: 193.222.99.226
+    port: 8545
+    uuid: 4dc73b6c-ed9e-4d40-8f3f-ebd15d8e702e
+    servername: www.cloudflare.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: VpalqjubUqVrLmgjSjR6lKVXDierUncli66LeIyIO0M
+      short-id: e98c63b3c1a5d204
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_香港_6
+    type: trojan
+    server: f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com
+    port: 13209
+    password: fac593ac-d6aa-4523-bea9-b3eb2a2b3da3
+    sni: 207.yuanul.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪_瑞典_7
+    type: vless
+    server: 34.51.240.236
+    port: 443
+    uuid: 788950f8-dbd9-4234-a42c-a7204665ce9f
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SOvacyM6CABhBHYdOHvhXbkNLHJBHuAkoJj2Z13xKlE
+      short-id: b4a6faed784ff461
+    skip-cert-verify: true
+    udp: true
+  - name: 🇪🇸_西班牙_8
+    type: vless
+    server: 34.175.107.233
+    port: 443
+    uuid: c55c9880-2f9c-4ad6-bfc2-5054516bf613
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: ios
+    reality-opts:
+      public-key: lM9EQ1rZH9inQjrZesuqgldsXYN_yfT5-tqhPfbyen4
+      short-id: 1c9e101e99bf86bb
+    skip-cert-verify: true
+    udp: true
+  - name: 🇪🇸_西班牙_9
+    type: vless
+    server: 34.175.107.233
+    port: 443
+    uuid: c55c9880-2f9c-4ad6-bfc2-5054516bf613
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: qq
+    reality-opts:
+      public-key: lM9EQ1rZH9inQjrZesuqgldsXYN_yfT5-tqhPfbyen4
+      short-id: 1c9e101e99bf86bb
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪_瑞典_10
+    type: vless
+    server: 34.51.240.236
+    port: 443
+    uuid: 788950f8-dbd9-4234-a42c-a7204665ce9f
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SOvacyM6CABhBHYdOHvhXbkNLHJBHuAkoJj2Z13xKlE
+      short-id: b4a6faed784ff461
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪_瑞典_11
+    type: vless
+    server: 34.51.240.236
+    port: 443
+    uuid: 788950f8-dbd9-4234-a42c-a7204665ce9f
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: qq
+    reality-opts:
+      public-key: SOvacyM6CABhBHYdOHvhXbkNLHJBHuAkoJj2Z13xKlE
+      short-id: b4a6faed784ff461
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪_瑞典_12
+    type: vless
+    server: 34.51.240.236
+    port: 443
+    uuid: 788950f8-dbd9-4234-a42c-a7204665ce9f
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: safari
+    reality-opts:
+      public-key: SOvacyM6CABhBHYdOHvhXbkNLHJBHuAkoJj2Z13xKlE
+      short-id: b4a6faed784ff461
+    skip-cert-verify: true
+    udp: true
+  - name: 🇪🇸_西班牙_13
+    type: vless
+    server: 34.175.107.233
+    port: 443
+    uuid: c55c9880-2f9c-4ad6-bfc2-5054516bf613
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: safari
+    reality-opts:
+      public-key: lM9EQ1rZH9inQjrZesuqgldsXYN_yfT5-tqhPfbyen4
+      short-id: 1c9e101e99bf86bb
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇪_瑞典_14
+    type: vless
+    server: 34.51.240.236
+    port: 443
+    uuid: 788950f8-dbd9-4234-a42c-a7204665ce9f
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: qq
+    reality-opts:
+      public-key: SOvacyM6CABhBHYdOHvhXbkNLHJBHuAkoJj2Z13xKlE
+      short-id: b4a6faed784ff461
+    skip-cert-verify: true
+    udp: true
+  - name: 🇪🇸_西班牙_15
+    type: vless
+    server: 34.175.107.233
+    port: 443
+    uuid: c55c9880-2f9c-4ad6-bfc2-5054516bf613
+    servername: www.cloudflare.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: lM9EQ1rZH9inQjrZesuqgldsXYN_yfT5-tqhPfbyen4
+      short-id: 1c9e101e99bf86bb
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_美国_16
+    type: vless
+    server: yaruss.stopingiphatered.shop
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    servername: yaruss.stopingiphatered.shop
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+      short-id: ff776ff77be48b88
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_美国_17
+    type: vless
+    server: 31.76.84.174
+    port: 443
+    uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+    servername: yaruss.stopingiphatered.shop
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+      short-id: ff776ff77be48b88
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_18
+    type: trojan
+    server: bestcdn3.868863.xyz
+    port: 2053
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059083351.206356.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /dmusicmuaawe
+      headers:
+        Host: 17909059081515.206356.xyz
+    udp: true
+  - name: 🇺🇸_美国_19
+    type: trojan
+    server: bestcdn2.868863.xyz
+    port: 2096
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059088595.206356.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /dmusicmuaawe
+      headers:
+        Host: 17909059085358.206356.xyz
+    udp: true
+  - name: 🏳️_未知_20
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059083614.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059081334.682637.xyz
+    udp: true
+  - name: 🇺🇸_美国_21
+    type: trojan
+    server: bestcdn2.868863.xyz
+    port: 2083
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059089575.206352.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agraeabtegrrh
+      headers:
+        Host: 17909059084730.206352.xyz
+    udp: true
+  - name: 🏳️_未知_22
+    type: trojan
+    server: bestcdn3.868863.xyz
+    port: 2053
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059088723.206355.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /videomuaawe
+      headers:
+        Host: 17909059087683.206355.xyz
+    udp: true
+  - name: 🏳️_未知_23
+    type: trojan
+    server: bestcdn1.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059087127.206355.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /videomuaawe
+      headers:
+        Host: 17909059081162.206355.xyz
+    udp: true
+  - name: 🏳️_未知_24
+    type: trojan
+    server: bestcdn1.868863.xyz
+    port: 2053
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059088661.206352.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agraeabtegrrh
+      headers:
+        Host: 17909059082388.206352.xyz
+    udp: true
+  - name: 🇺🇸_美国_25
+    type: trojan
+    server: bestcdn2.868863.xyz
+    port: 2096
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059084414.206355.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /videomuaawe
+      headers:
+        Host: 17909059084146.206355.xyz
+    udp: true
+  - name: 🇸🇬_新加坡_26
+    type: vless
+    server: 5.223.19.211
+    port: 80
+    uuid: 4b8a0930-1c36-4efe-b4fe-21f9ad97905c
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_27
+    type: trojan
+    server: bestcdn1.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059085760.168381.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /tianboephth
+      headers:
+        Host: 17909059083150.168381.xyz
+    udp: true
+  - name: 🏳️_未知_28
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 8443
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059086145.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059086953.682637.xyz
+    udp: true
+  - name: 🇺🇸_美国_29
+    type: trojan
+    server: bestcdn2.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059084515.206353.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agrbniuh
+      headers:
+        Host: 17909059082984.206353.xyz
+    udp: true
+  - name: 🏳️_未知_30
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059083713.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059082389.682637.xyz
+    udp: true
+  - name: 🏳️_未知_31
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 8443
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059082381.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059086881.682637.xyz
+    udp: true
+  - name: 🏳️_未知_32
+    type: trojan
+    server: bestcdn1.868863.xyz
+    port: 2096
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059083305.206353.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agrbniuh
+      headers:
+        Host: 17909059083033.206353.xyz
+    udp: true
+  - name: 🇺🇸_美国_33
+    type: trojan
+    server: bestcdn2.868863.xyz
+    port: 2096
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059083711.168381.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /tianboephth
+      headers:
+        Host: 17909059085579.168381.xyz
+    udp: true
+  - name: 🏳️_未知_34
+    type: trojan
+    server: bestcdn3.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059088812.206352.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agraeabtegrrh
+      headers:
+        Host: 17909059084637.206352.xyz
+    udp: true
+  - name: 🏳️_未知_35
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059085848.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059088103.682637.xyz
+    udp: true
+  - name: 🏳️_未知_36
+    type: trojan
+    server: bestcdn3.868863.xyz
+    port: 2083
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059083612.206353.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agrbniuh
+      headers:
+        Host: 17909059086469.206353.xyz
+    udp: true
+  - name: 🏳️_未知_37
+    type: trojan
+    server: bestcdn3.868863.xyz
+    port: 2053
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059089918.168381.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /tianboephth
+      headers:
+        Host: 17909059087568.168381.xyz
+    udp: true
+  - name: 🇹🇼_台湾_38
+    type: vmess
+    server: mdk.mdmekjll.best
+    port: 80
+    uuid: 6E571484-4166-4699-8F58-B34A1823691F
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /game/resources
+      headers:
+        Host: mdk.mdmekjll.best
+    udp: true
+  - name: 🇮🇩_印度尼西亚_39
+    type: vmess
+    server: az-1.linkaa.xyz
+    port: 53437
+    uuid: 6E571484-4166-4699-8F58-B34A1823691F
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /game/resources
+    udp: true
+  - name: 🇮🇩_印度尼西亚_40
+    type: vmess
+    server: az-1.linkaa.xyz
+    port: 53617
+    uuid: 6E571484-4166-4699-8F58-B34A1823691F
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /game/resources
+      headers:
+        Host: az-1.linkaa.xyz
+    udp: true
+  - name: 🏳️_未知_41
+    type: vless
+    server: 188.114.96.3
+    port: 8443
+    uuid: 69848b7f-3ee7-4c30-b035-6cff5e08ac4a
+    network: ws
+    servername: us.luxes.network
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /assets
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇼_台湾_42
+    type: vmess
+    server: hi.northcluster.info
+    port: 52300
+    uuid: 6e571484-4166-4699-8f58-b34a1823691f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /video
+    udp: true
+  - name: 🇨🇦_加拿大_43
+    type: vless
+    server: 172.93.167.45
+    port: 443
+    uuid: 8344360f-0349-4784-a19f-33fd92e89389
+    network: ws
+    servername: api.w2m.ink
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /v2
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪_德国_44
+    type: trojan
+    server: 45.80.111.7
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 🏳️_未知_45
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059084379.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059084152.682637.xyz
+    udp: true
+  - name: 🏳️_未知_46
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 2096
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059087782.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059084915.682637.xyz
+    udp: true
+  - name: 🏳️_未知_47
+    type: trojan
+    server: bestcdn0.868863.xyz
+    port: 2053
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059084426.682637.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /ahyrtuyjykl
+      headers:
+        Host: 17909059088594.682637.xyz
+    udp: true
+  - name: 🏳️_未知_48
+    type: trojan
+    server: 99.cdn.aewe.de
+    port: 2096
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059082107.206352.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agraeabtegrrh
+      headers:
+        Host: 17909059081323.206352.xyz
+    udp: true
+  - name: 🏳️_未知_49
+    type: trojan
+    server: 99.cdn.aewe.de
+    port: 8443
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059085083.206353.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /agrbniuh
+      headers:
+        Host: 17909059081529.206353.xyz
+    udp: true
+  - name: 🏳️_未知_50
+    type: trojan
+    server: 99.cdn.aewe.de
+    port: 2083
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059086831.206355.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /videomuaawe
+      headers:
+        Host: 17909059081875.206355.xyz
+    udp: true
+  - name: 🏳️_未知_51
+    type: trojan
+    server: 99.cdn.aewe.de
+    port: 2083
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059082779.206356.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /dmusicmuaawe
+      headers:
+        Host: 17909059081265.206356.xyz
+    udp: true
+  - name: 🏳️_未知_52
+    type: trojan
+    server: 99.cdn.aewe.de
+    port: 2083
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059089114.168381.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /tianboephth
+      headers:
+        Host: 17909059081985.168381.xyz
+    udp: true
+  - name: 🏳️_未知_53
+    type: trojan
+    server: bestcdn1.868863.xyz
+    port: 2087
+    password: 6d290b54-4b7c-4b1c-8925-53cf38a28612
+    sni: 17909059088102.206356.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /dmusicmuaawe
+      headers:
+        Host: 17909059088522.206356.xyz
+    udp: true
+  - name: 🇫🇷_法国_54
+    type: vmess
+    server: 2001:bc8:32d7:1a9::2
+    port: 18901
+    uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /github.com/Alvin9999-newpac/fanqiang
+    udp: true
+  - name: 🇯🇵_日本_55
+    type: vless
+    server: 103.115.18.54
+    port: 443
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    network: ws
+    servername: cdn8848.776676.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /mall/china/doc?ed=2560
+      headers:
+        Host: cdn8848.776676.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵_日本_56
+    type: vless
+    server: 103.115.18.54
+    port: 443
+    uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+    network: ws
+    servername: cdn8848.776676.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /episode/files?ed=2560
+      headers:
+        Host: cdn8848.776676.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳_中国_57
+    type: vless
+    server: 129.211.188.184
+    port: 8443
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    network: ws
+    servername: jp3.yohototo.top
+    tls: true
+    client-fingerprint: unsafe
+    ws-opts:
+      path: /tyxyws
+      headers:
+        Host: jp3.yohototo.top
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬_新加坡_58
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+    network: ws
+    servername: kv.074167.xyz
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: kv.074167.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_59
+    type: vless
+    server: 172.67.183.52
+    port: 80
+    uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
+    network: ws
+    servername: 172.67.183.52
+    tls: false
+    ws-opts:
+      path: /vl/2INL39K32mKsOBKt?ed=2560
+      headers:
+        Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱_荷兰_60
+    type: vless
+    server: 188.164.248.123
+    port: 8443
+    uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+    network: ws
+    servername: vp21.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: vp21.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_61
+    type: vless
+    server: cf.130519.xyz
+    port: 443
+    uuid: cd7c5c42-7677-4002-8ad3-4433b166a5d1
+    network: ws
+    servername: 819.18827466.bot.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: 819.18827466.bot.cd
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_62
+    type: vless
+    server: 104.21.70.21
+    port: 8080
+    uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
+    network: ws
+    tls: false
+    ws-opts:
+      path: /rN50nmm9L1DeY73C?ed=2560
+      headers:
+        Host: lucky-lab-ac6d.caveyi8071.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷_法国_63
+    type: vmess
+    server: 2001:bc8:32d7:1a9::2
+    port: 18901
+    uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /github.com/Alvin9999-newpac/fanqiang
+    udp: true
+  - name: 🇺🇸_美国_64
+    type: vless
+    server: 63.141.128.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime42.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_65
+    type: vless
+    server: 104.21.56.90
+    port: 80
+    uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
+    network: ws
+    servername: 104.21.56.90
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /vl/2INL39K32mKsOBKt?ed=2560
+      headers:
+        Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_66
+    type: vless
+    server: 172.67.207.26
+    port: 8880
+    uuid: 26beb784-a664-4c3e-becf-0f0c12568b62
+    network: ws
+    servername: 172.67.207.26
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /pyip=ProxyIP.JP.CMLiussss.net
+      headers:
+        Host: twilight-poetry-2bfe.218-699.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_67
+    type: vless
+    server: 172.67.183.52
+    port: 80
+    uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
+    network: ws
+    servername: 172.67.183.52
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /vl/2INL39K32mKsOBKt?ed=2560
+      headers:
+        Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_68
+    type: vless
+    server: 188.114.96.3
+    port: 8443
+    uuid: 69848b7f-3ee7-4c30-b035-6cff5e08ac4a
+    network: ws
+    servername: us.luxes.network
+    tls: true
+    client-fingerprint: safari
+    ws-opts:
+      path: /assets?ed
+    skip-cert-verify: true
+    udp: true
+  - name: 🇪🇪_爱沙尼亚_69
+    type: vless
+    server: 5.45.115.162
+    port: 2087
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: qcswhj2.edge-cache.danfeng4.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng-pw8lj2-nzliwt-h23l-978coeve?ed=2560
+      headers:
+        Host: qcswhj2.edge-cache.danfeng4.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_70
+    type: vless
+    server: envato.com
+    port: 8880
+    uuid: baaa882d-ac50-4bba-bd8d-5486f7d34005
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: blue-water-924c.174-235.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_美国_71
+    type: vless
+    server: 155.46.167.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime50.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_美国_72
+    type: trojan
+    server: 199.107.164.105
+    port: 443
+    password: 8GXLP3dEzm7T8wP5Jx0Ufg
+    sni: quictest.burncommunity.ru
+    skip-cert-verify: true
+    ws-opts:
+      path: /
+      headers:
+        Host: quictest.burncommunity.ru
+    udp: true
+  - name: 🏳️_未知_73
+    type: vless
+    server: 172.67.79.160
+    port: 2087
+    uuid: a4a951b9-901d-4db8-8a7d-6df82c4b5c23
+    network: ws
+    servername: cvhpyn.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: cvhpyn.pages.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇿_捷克_74
+    type: vless
+    server: 193.124.56.100
+    port: 2087
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: qcswhj2.edge-cache.danfeng4.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng-pw8lj2-nzliwt-h23l-978coeve?ed=2560
+      headers:
+        Host: qcswhj2.edge-cache.danfeng4.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇹_意大利_75
+    type: vless
+    server: 179.255.190.5
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: qcswhj2.edge-cache.danfeng4.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng-pw8lj2-nzliwt-h23l-978coeve?ed=2560
+      headers:
+        Host: qcswhj2.edge-cache.danfeng4.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_美国_76
+    type: vless
+    server: 80.93.202.40
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime02.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_美国_77
+    type: trojan
+    server: 165.215.250.14
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    ws-opts:
+      path: //assignment
+      headers:
+        Host: www.calmlunch.com
+    udp: true
+  - name: 🇹🇷_土耳其_78
+    type: vless
+    server: 91.206.71.8
+    port: 80
+    uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
+    network: ws
+    tls: false
+    ws-opts:
+      path: /pyip=Telegram🇨🇳+@WangCai2
+      headers:
+        Host: round-haze-8783.294.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🇹🇷_土耳其_79
+    type: vless
+    server: 91.206.71.8
+    port: 80
+    uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
+    network: ws
+    tls: false
+    ws-opts:
+      path: /pyip=Telegram🇨🇳 @WangCai2
+      headers:
+        Host: round-haze-8783.294.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_80
+    type: vless
+    server: 188.114.96.9
+    port: 443
+    uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+    network: ws
+    servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_81
+    type: vless
+    server: 8.35.211.248
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: qcswhj2.edge-cache.danfeng4.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng-pw8lj2-nzliwt-h23l-978coeve?ed=2560
+      headers:
+        Host: qcswhj2.edge-cache.danfeng4.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🏳️_未知_82
+    type: trojan
+    server: 162.159.36.20
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 🏳️_未知_83
+    type: trojan
+    server: 104.18.32.47
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+    udp: true
+  - name: 🏳️_未知_84
+    type: trojan
+    server: 172.64.150.28
+    port: 443
+    password: humanity
+    sni: www.calmlunch.com
+    skip-cert-verify: true
+    ws-opts:
+      path: /assignment
+      headers:
+        Host: www.calmlunch.com
+    udp: true
+  - name: 🇬🇧_英国_85
+    type: vless
+    server: 194.36.55.146
+    port: 80
+    uuid: 964e6322-afad-4594-8508-86d634d732e6
+    network: ws
+    servername: 194.36.55.146
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: blacklegends.umc-mansur13.workers.dev
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 每天更新，请加电报群防止失联
+      - 电报群：https://t.me/vvkj11
+      - 日期：10-03
+      - 免费VPN：https://tt.vg/FJOE2Mm
+      - 🇩🇪_德国_5
+      - 🇭🇰_香港_6
+      - 🇸🇪_瑞典_7
+      - 🇪🇸_西班牙_8
+      - 🇪🇸_西班牙_9
+      - 🇸🇪_瑞典_10
+      - 🇸🇪_瑞典_11
+      - 🇸🇪_瑞典_12
+      - 🇪🇸_西班牙_13
+      - 🇸🇪_瑞典_14
+      - 🇪🇸_西班牙_15
+      - 🇺🇸_美国_16
+      - 🇺🇸_美国_17
+      - 🏳️_未知_18
+      - 🇺🇸_美国_19
+      - 🏳️_未知_20
+      - 🇺🇸_美国_21
+      - 🏳️_未知_22
+      - 🏳️_未知_23
+      - 🏳️_未知_24
+      - 🇺🇸_美国_25
+      - 🇸🇬_新加坡_26
+      - 🏳️_未知_27
+      - 🏳️_未知_28
+      - 🇺🇸_美国_29
+      - 🏳️_未知_30
+      - 🏳️_未知_31
+      - 🏳️_未知_32
+      - 🇺🇸_美国_33
+      - 🏳️_未知_34
+      - 🏳️_未知_35
+      - 🏳️_未知_36
+      - 🏳️_未知_37
+      - 🇹🇼_台湾_38
+      - 🇮🇩_印度尼西亚_39
+      - 🇮🇩_印度尼西亚_40
+      - 🏳️_未知_41
+      - 🇹🇼_台湾_42
+      - 🇨🇦_加拿大_43
+      - 🇩🇪_德国_44
+      - 🏳️_未知_45
+      - 🏳️_未知_46
+      - 🏳️_未知_47
+      - 🏳️_未知_48
+      - 🏳️_未知_49
+      - 🏳️_未知_50
+      - 🏳️_未知_51
+      - 🏳️_未知_52
+      - 🏳️_未知_53
+      - 🇫🇷_法国_54
+      - 🇯🇵_日本_55
+      - 🇯🇵_日本_56
+      - 🇨🇳_中国_57
+      - 🇸🇬_新加坡_58
+      - 🏳️_未知_59
+      - 🇳🇱_荷兰_60
+      - 🏳️_未知_61
+      - 🏳️_未知_62
+      - 🇫🇷_法国_63
+      - 🇺🇸_美国_64
+      - 🏳️_未知_65
+      - 🏳️_未知_66
+      - 🏳️_未知_67
+      - 🏳️_未知_68
+      - 🇪🇪_爱沙尼亚_69
+      - 🏳️_未知_70
+      - 🇺🇸_美国_71
+      - 🇺🇸_美国_72
+      - 🏳️_未知_73
+      - 🇨🇿_捷克_74
+      - 🇮🇹_意大利_75
+      - 🇺🇸_美国_76
+      - 🇺🇸_美国_77
+      - 🇹🇷_土耳其_78
+      - 🇹🇷_土耳其_79
+      - 🏳️_未知_80
+      - 🏳️_未知_81
+      - 🏳️_未知_82
+      - 🏳️_未知_83
+      - 🏳️_未知_84
+      - 🇬🇧_英国_85
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 每天更新，请加电报群防止失联
+      - 电报群：https://t.me/vvkj11
+      - 日期：10-03
+      - 免费VPN：https://tt.vg/FJOE2Mm
+      - 🇩🇪_德国_5
+      - 🇭🇰_香港_6
+      - 🇸🇪_瑞典_7
+      - 🇪🇸_西班牙_8
+      - 🇪🇸_西班牙_9
+      - 🇸🇪_瑞典_10
+      - 🇸🇪_瑞典_11
+      - 🇸🇪_瑞典_12
+      - 🇪🇸_西班牙_13
+      - 🇸🇪_瑞典_14
+      - 🇪🇸_西班牙_15
+      - 🇺🇸_美国_16
+      - 🇺🇸_美国_17
+      - 🏳️_未知_18
+      - 🇺🇸_美国_19
+      - 🏳️_未知_20
+      - 🇺🇸_美国_21
+      - 🏳️_未知_22
+      - 🏳️_未知_23
+      - 🏳️_未知_24
+      - 🇺🇸_美国_25
+      - 🇸🇬_新加坡_26
+      - 🏳️_未知_27
+      - 🏳️_未知_28
+      - 🇺🇸_美国_29
+      - 🏳️_未知_30
+      - 🏳️_未知_31
+      - 🏳️_未知_32
+      - 🇺🇸_美国_33
+      - 🏳️_未知_34
+      - 🏳️_未知_35
+      - 🏳️_未知_36
+      - 🏳️_未知_37
+      - 🇹🇼_台湾_38
+      - 🇮🇩_印度尼西亚_39
+      - 🇮🇩_印度尼西亚_40
+      - 🏳️_未知_41
+      - 🇹🇼_台湾_42
+      - 🇨🇦_加拿大_43
+      - 🇩🇪_德国_44
+      - 🏳️_未知_45
+      - 🏳️_未知_46
+      - 🏳️_未知_47
+      - 🏳️_未知_48
+      - 🏳️_未知_49
+      - 🏳️_未知_50
+      - 🏳️_未知_51
+      - 🏳️_未知_52
+      - 🏳️_未知_53
+      - 🇫🇷_法国_54
+      - 🇯🇵_日本_55
+      - 🇯🇵_日本_56
+      - 🇨🇳_中国_57
+      - 🇸🇬_新加坡_58
+      - 🏳️_未知_59
+      - 🇳🇱_荷兰_60
+      - 🏳️_未知_61
+      - 🏳️_未知_62
+      - 🇫🇷_法国_63
+      - 🇺🇸_美国_64
+      - 🏳️_未知_65
+      - 🏳️_未知_66
+      - 🏳️_未知_67
+      - 🏳️_未知_68
+      - 🇪🇪_爱沙尼亚_69
+      - 🏳️_未知_70
+      - 🇺🇸_美国_71
+      - 🇺🇸_美国_72
+      - 🏳️_未知_73
+      - 🇨🇿_捷克_74
+      - 🇮🇹_意大利_75
+      - 🇺🇸_美国_76
+      - 🇺🇸_美国_77
+      - 🇹🇷_土耳其_78
+      - 🇹🇷_土耳其_79
+      - 🏳️_未知_80
+      - 🏳️_未知_81
+      - 🏳️_未知_82
+      - 🏳️_未知_83
+      - 🏳️_未知_84
+      - 🇬🇧_英国_85
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 每天更新，请加电报群防止失联
+      - 电报群：https://t.me/vvkj11
+      - 日期：10-03
+      - 免费VPN：https://tt.vg/FJOE2Mm
+      - 🇩🇪_德国_5
+      - 🇭🇰_香港_6
+      - 🇸🇪_瑞典_7
+      - 🇪🇸_西班牙_8
+      - 🇪🇸_西班牙_9
+      - 🇸🇪_瑞典_10
+      - 🇸🇪_瑞典_11
+      - 🇸🇪_瑞典_12
+      - 🇪🇸_西班牙_13
+      - 🇸🇪_瑞典_14
+      - 🇪🇸_西班牙_15
+      - 🇺🇸_美国_16
+      - 🇺🇸_美国_17
+      - 🏳️_未知_18
+      - 🇺🇸_美国_19
+      - 🏳️_未知_20
+      - 🇺🇸_美国_21
+      - 🏳️_未知_22
+      - 🏳️_未知_23
+      - 🏳️_未知_24
+      - 🇺🇸_美国_25
+      - 🇸🇬_新加坡_26
+      - 🏳️_未知_27
+      - 🏳️_未知_28
+      - 🇺🇸_美国_29
+      - 🏳️_未知_30
+      - 🏳️_未知_31
+      - 🏳️_未知_32
+      - 🇺🇸_美国_33
+      - 🏳️_未知_34
+      - 🏳️_未知_35
+      - 🏳️_未知_36
+      - 🏳️_未知_37
+      - 🇹🇼_台湾_38
+      - 🇮🇩_印度尼西亚_39
+      - 🇮🇩_印度尼西亚_40
+      - 🏳️_未知_41
+      - 🇹🇼_台湾_42
+      - 🇨🇦_加拿大_43
+      - 🇩🇪_德国_44
+      - 🏳️_未知_45
+      - 🏳️_未知_46
+      - 🏳️_未知_47
+      - 🏳️_未知_48
+      - 🏳️_未知_49
+      - 🏳️_未知_50
+      - 🏳️_未知_51
+      - 🏳️_未知_52
+      - 🏳️_未知_53
+      - 🇫🇷_法国_54
+      - 🇯🇵_日本_55
+      - 🇯🇵_日本_56
+      - 🇨🇳_中国_57
+      - 🇸🇬_新加坡_58
+      - 🏳️_未知_59
+      - 🇳🇱_荷兰_60
+      - 🏳️_未知_61
+      - 🏳️_未知_62
+      - 🇫🇷_法国_63
+      - 🇺🇸_美国_64
+      - 🏳️_未知_65
+      - 🏳️_未知_66
+      - 🏳️_未知_67
+      - 🏳️_未知_68
+      - 🇪🇪_爱沙尼亚_69
+      - 🏳️_未知_70
+      - 🇺🇸_美国_71
+      - 🇺🇸_美国_72
+      - 🏳️_未知_73
+      - 🇨🇿_捷克_74
+      - 🇮🇹_意大利_75
+      - 🇺🇸_美国_76
+      - 🇺🇸_美国_77
+      - 🇹🇷_土耳其_78
+      - 🇹🇷_土耳其_79
+      - 🏳️_未知_80
+      - 🏳️_未知_81
+      - 🏳️_未知_82
+      - 🏳️_未知_83
+      - 🏳️_未知_84
+      - 🇬🇧_英国_85
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 每天更新，请加电报群防止失联
+      - 电报群：https://t.me/vvkj11
+      - 日期：10-03
+      - 免费VPN：https://tt.vg/FJOE2Mm
+      - 🇩🇪_德国_5
+      - 🇭🇰_香港_6
+      - 🇸🇪_瑞典_7
+      - 🇪🇸_西班牙_8
+      - 🇪🇸_西班牙_9
+      - 🇸🇪_瑞典_10
+      - 🇸🇪_瑞典_11
+      - 🇸🇪_瑞典_12
+      - 🇪🇸_西班牙_13
+      - 🇸🇪_瑞典_14
+      - 🇪🇸_西班牙_15
+      - 🇺🇸_美国_16
+      - 🇺🇸_美国_17
+      - 🏳️_未知_18
+      - 🇺🇸_美国_19
+      - 🏳️_未知_20
+      - 🇺🇸_美国_21
+      - 🏳️_未知_22
+      - 🏳️_未知_23
+      - 🏳️_未知_24
+      - 🇺🇸_美国_25
+      - 🇸🇬_新加坡_26
+      - 🏳️_未知_27
+      - 🏳️_未知_28
+      - 🇺🇸_美国_29
+      - 🏳️_未知_30
+      - 🏳️_未知_31
+      - 🏳️_未知_32
+      - 🇺🇸_美国_33
+      - 🏳️_未知_34
+      - 🏳️_未知_35
+      - 🏳️_未知_36
+      - 🏳️_未知_37
+      - 🇹🇼_台湾_38
+      - 🇮🇩_印度尼西亚_39
+      - 🇮🇩_印度尼西亚_40
+      - 🏳️_未知_41
+      - 🇹🇼_台湾_42
+      - 🇨🇦_加拿大_43
+      - 🇩🇪_德国_44
+      - 🏳️_未知_45
+      - 🏳️_未知_46
+      - 🏳️_未知_47
+      - 🏳️_未知_48
+      - 🏳️_未知_49
+      - 🏳️_未知_50
+      - 🏳️_未知_51
+      - 🏳️_未知_52
+      - 🏳️_未知_53
+      - 🇫🇷_法国_54
+      - 🇯🇵_日本_55
+      - 🇯🇵_日本_56
+      - 🇨🇳_中国_57
+      - 🇸🇬_新加坡_58
+      - 🏳️_未知_59
+      - 🇳🇱_荷兰_60
+      - 🏳️_未知_61
+      - 🏳️_未知_62
+      - 🇫🇷_法国_63
+      - 🇺🇸_美国_64
+      - 🏳️_未知_65
+      - 🏳️_未知_66
+      - 🏳️_未知_67
+      - 🏳️_未知_68
+      - 🇪🇪_爱沙尼亚_69
+      - 🏳️_未知_70
+      - 🇺🇸_美国_71
+      - 🇺🇸_美国_72
+      - 🏳️_未知_73
+      - 🇨🇿_捷克_74
+      - 🇮🇹_意大利_75
+      - 🇺🇸_美国_76
+      - 🇺🇸_美国_77
+      - 🇹🇷_土耳其_78
+      - 🇹🇷_土耳其_79
+      - 🏳️_未知_80
+      - 🏳️_未知_81
+      - 🏳️_未知_82
+      - 🏳️_未知_83
+      - 🏳️_未知_84
+      - 🇬🇧_英国_85
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 每天更新，请加电报群防止失联
+      - 电报群：https://t.me/vvkj11
+      - 日期：10-03
+      - 免费VPN：https://tt.vg/FJOE2Mm
+      - 🇩🇪_德国_5
+      - 🇭🇰_香港_6
+      - 🇸🇪_瑞典_7
+      - 🇪🇸_西班牙_8
+      - 🇪🇸_西班牙_9
+      - 🇸🇪_瑞典_10
+      - 🇸🇪_瑞典_11
+      - 🇸🇪_瑞典_12
+      - 🇪🇸_西班牙_13
+      - 🇸🇪_瑞典_14
+      - 🇪🇸_西班牙_15
+      - 🇺🇸_美国_16
+      - 🇺🇸_美国_17
+      - 🏳️_未知_18
+      - 🇺🇸_美国_19
+      - 🏳️_未知_20
+      - 🇺🇸_美国_21
+      - 🏳️_未知_22
+      - 🏳️_未知_23
+      - 🏳️_未知_24
+      - 🇺🇸_美国_25
+      - 🇸🇬_新加坡_26
+      - 🏳️_未知_27
+      - 🏳️_未知_28
+      - 🇺🇸_美国_29
+      - 🏳️_未知_30
+      - 🏳️_未知_31
+      - 🏳️_未知_32
+      - 🇺🇸_美国_33
+      - 🏳️_未知_34
+      - 🏳️_未知_35
+      - 🏳️_未知_36
+      - 🏳️_未知_37
+      - 🇹🇼_台湾_38
+      - 🇮🇩_印度尼西亚_39
+      - 🇮🇩_印度尼西亚_40
+      - 🏳️_未知_41
+      - 🇹🇼_台湾_42
+      - 🇨🇦_加拿大_43
+      - 🇩🇪_德国_44
+      - 🏳️_未知_45
+      - 🏳️_未知_46
+      - 🏳️_未知_47
+      - 🏳️_未知_48
+      - 🏳️_未知_49
+      - 🏳️_未知_50
+      - 🏳️_未知_51
+      - 🏳️_未知_52
+      - 🏳️_未知_53
+      - 🇫🇷_法国_54
+      - 🇯🇵_日本_55
+      - 🇯🇵_日本_56
+      - 🇨🇳_中国_57
+      - 🇸🇬_新加坡_58
+      - 🏳️_未知_59
+      - 🇳🇱_荷兰_60
+      - 🏳️_未知_61
+      - 🏳️_未知_62
+      - 🇫🇷_法国_63
+      - 🇺🇸_美国_64
+      - 🏳️_未知_65
+      - 🏳️_未知_66
+      - 🏳️_未知_67
+      - 🏳️_未知_68
+      - 🇪🇪_爱沙尼亚_69
+      - 🏳️_未知_70
+      - 🇺🇸_美国_71
+      - 🇺🇸_美国_72
+      - 🏳️_未知_73
+      - 🇨🇿_捷克_74
+      - 🇮🇹_意大利_75
+      - 🇺🇸_美国_76
+      - 🇺🇸_美国_77
+      - 🇹🇷_土耳其_78
+      - 🇹🇷_土耳其_79
+      - 🏳️_未知_80
+      - 🏳️_未知_81
+      - 🏳️_未知_82
+      - 🏳️_未知_83
+      - 🏳️_未知_84
+      - 🇬🇧_英国_85
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 每天更新，请加电报群防止失联
+      - 电报群：https://t.me/vvkj11
+      - 日期：10-03
+      - 免费VPN：https://tt.vg/FJOE2Mm
+      - 🇩🇪_德国_5
+      - 🇭🇰_香港_6
+      - 🇸🇪_瑞典_7
+      - 🇪🇸_西班牙_8
+      - 🇪🇸_西班牙_9
+      - 🇸🇪_瑞典_10
+      - 🇸🇪_瑞典_11
+      - 🇸🇪_瑞典_12
+      - 🇪🇸_西班牙_13
+      - 🇸🇪_瑞典_14
+      - 🇪🇸_西班牙_15
+      - 🇺🇸_美国_16
+      - 🇺🇸_美国_17
+      - 🏳️_未知_18
+      - 🇺🇸_美国_19
+      - 🏳️_未知_20
+      - 🇺🇸_美国_21
+      - 🏳️_未知_22
+      - 🏳️_未知_23
+      - 🏳️_未知_24
+      - 🇺🇸_美国_25
+      - 🇸🇬_新加坡_26
+      - 🏳️_未知_27
+      - 🏳️_未知_28
+      - 🇺🇸_美国_29
+      - 🏳️_未知_30
+      - 🏳️_未知_31
+      - 🏳️_未知_32
+      - 🇺🇸_美国_33
+      - 🏳️_未知_34
+      - 🏳️_未知_35
+      - 🏳️_未知_36
+      - 🏳️_未知_37
+      - 🇹🇼_台湾_38
+      - 🇮🇩_印度尼西亚_39
+      - 🇮🇩_印度尼西亚_40
+      - 🏳️_未知_41
+      - 🇹🇼_台湾_42
+      - 🇨🇦_加拿大_43
+      - 🇩🇪_德国_44
+      - 🏳️_未知_45
+      - 🏳️_未知_46
+      - 🏳️_未知_47
+      - 🏳️_未知_48
+      - 🏳️_未知_49
+      - 🏳️_未知_50
+      - 🏳️_未知_51
+      - 🏳️_未知_52
+      - 🏳️_未知_53
+      - 🇫🇷_法国_54
+      - 🇯🇵_日本_55
+      - 🇯🇵_日本_56
+      - 🇨🇳_中国_57
+      - 🇸🇬_新加坡_58
+      - 🏳️_未知_59
+      - 🇳🇱_荷兰_60
+      - 🏳️_未知_61
+      - 🏳️_未知_62
+      - 🇫🇷_法国_63
+      - 🇺🇸_美国_64
+      - 🏳️_未知_65
+      - 🏳️_未知_66
+      - 🏳️_未知_67
+      - 🏳️_未知_68
+      - 🇪🇪_爱沙尼亚_69
+      - 🏳️_未知_70
+      - 🇺🇸_美国_71
+      - 🇺🇸_美国_72
+      - 🏳️_未知_73
+      - 🇨🇿_捷克_74
+      - 🇮🇹_意大利_75
+      - 🇺🇸_美国_76
+      - 🇺🇸_美国_77
+      - 🇹🇷_土耳其_78
+      - 🇹🇷_土耳其_79
+      - 🏳️_未知_80
+      - 🏳️_未知_81
+      - 🏳️_未知_82
+      - 🏳️_未知_83
+      - 🏳️_未知_84
+      - 🇬🇧_英国_85
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 每天更新，请加电报群防止失联
+      - 电报群：https://t.me/vvkj11
+      - 日期：10-03
+      - 免费VPN：https://tt.vg/FJOE2Mm
+      - 🇩🇪_德国_5
+      - 🇭🇰_香港_6
+      - 🇸🇪_瑞典_7
+      - 🇪🇸_西班牙_8
+      - 🇪🇸_西班牙_9
+      - 🇸🇪_瑞典_10
+      - 🇸🇪_瑞典_11
+      - 🇸🇪_瑞典_12
+      - 🇪🇸_西班牙_13
+      - 🇸🇪_瑞典_14
+      - 🇪🇸_西班牙_15
+      - 🇺🇸_美国_16
+      - 🇺🇸_美国_17
+      - 🏳️_未知_18
+      - 🇺🇸_美国_19
+      - 🏳️_未知_20
+      - 🇺🇸_美国_21
+      - 🏳️_未知_22
+      - 🏳️_未知_23
+      - 🏳️_未知_24
+      - 🇺🇸_美国_25
+      - 🇸🇬_新加坡_26
+      - 🏳️_未知_27
+      - 🏳️_未知_28
+      - 🇺🇸_美国_29
+      - 🏳️_未知_30
+      - 🏳️_未知_31
+      - 🏳️_未知_32
+      - 🇺🇸_美国_33
+      - 🏳️_未知_34
+      - 🏳️_未知_35
+      - 🏳️_未知_36
+      - 🏳️_未知_37
+      - 🇹🇼_台湾_38
+      - 🇮🇩_印度尼西亚_39
+      - 🇮🇩_印度尼西亚_40
+      - 🏳️_未知_41
+      - 🇹🇼_台湾_42
+      - 🇨🇦_加拿大_43
+      - 🇩🇪_德国_44
+      - 🏳️_未知_45
+      - 🏳️_未知_46
+      - 🏳️_未知_47
+      - 🏳️_未知_48
+      - 🏳️_未知_49
+      - 🏳️_未知_50
+      - 🏳️_未知_51
+      - 🏳️_未知_52
+      - 🏳️_未知_53
+      - 🇫🇷_法国_54
+      - 🇯🇵_日本_55
+      - 🇯🇵_日本_56
+      - 🇨🇳_中国_57
+      - 🇸🇬_新加坡_58
+      - 🏳️_未知_59
+      - 🇳🇱_荷兰_60
+      - 🏳️_未知_61
+      - 🏳️_未知_62
+      - 🇫🇷_法国_63
+      - 🇺🇸_美国_64
+      - 🏳️_未知_65
+      - 🏳️_未知_66
+      - 🏳️_未知_67
+      - 🏳️_未知_68
+      - 🇪🇪_爱沙尼亚_69
+      - 🏳️_未知_70
+      - 🇺🇸_美国_71
+      - 🇺🇸_美国_72
+      - 🏳️_未知_73
+      - 🇨🇿_捷克_74
+      - 🇮🇹_意大利_75
+      - 🇺🇸_美国_76
+      - 🇺🇸_美国_77
+      - 🇹🇷_土耳其_78
+      - 🇹🇷_土耳其_79
+      - 🏳️_未知_80
+      - 🏳️_未知_81
+      - 🏳️_未知_82
+      - 🏳️_未知_83
+      - 🏳️_未知_84
+      - 🇬🇧_英国_85
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
